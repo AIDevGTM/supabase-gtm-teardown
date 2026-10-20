@@ -1232,6 +1232,14 @@ FILES["0019_ideal_customer.sql"] = "-- Spell out \"ideal customer\" everywhere i
     f"update public.{t} set {c} = {_replace_chain(c)} where {c} like '%ICP%';\n" for t, cols in _ICP_COLS.items() for c in cols)
 
 
+# ------------------------------------------------------------------ 0020 link the public repo
+REPO = "https://github.com/AIDevGTM/supabase-gtm-teardown"
+FILES["0020_repo_links.sql"] = inserts("sources", ["n", "label", "href"], [
+    (24, "Our AI recommendation study: prompts, data and scripts (pre-registered, Oct 2026)", REPO + "/tree/main/research/ai-recommendation-test"),
+    (25, "This case study's code and data (MIT)", REPO),
+]).rstrip(";\n") + "\non conflict (n) do update set label = excluded.label, href = excluded.href;\n"
+
+
 def main():
     MIG.mkdir(parents=True, exist_ok=True)
     for name, sql in FILES.items():
