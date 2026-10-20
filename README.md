@@ -4,6 +4,8 @@ A go-to-market case study of Supabase for early-stage dev tool founders, built a
 
 Every chapter of the page is a table, and every number comes from a query that runs live against this database; the page shows each query's real execution time. There are 12 lessons, each with the evidence, the steps, a target and when not to copy it, plus templates, a stage-based playbook and a pre-registered study of which backends Claude models recommend.
 
+**Read it:** https://steal-supabase-gtm.lovable.app
+
 **Author:** Shane O'Connor, GTM Lead @ QC Growth. Independent analysis, not affiliated with Supabase.
 
 ## What's in here
