@@ -1,0 +1,28 @@
+Pre-registration record: Supabase AI recommendation study
+Recorded (UTC): 2026-10-17T00:24:37Z
+Recorded before any model was called. Files and SHA-256 hashes:
+40c74123be43673fe78260fda51459ca91a122b779a7341cb619899696252b80  STUDY-DESIGN.md
+029dc93f9fcc8984ceed6dafd4463b7399de9466eb06048ea41a0cc1c4c607dd  prompts.json
+5f728be48d49a762ad45ecd1d59ea30c5bd920cd51d227159b20098f5de8cc84  score.py
+2375eb9690b9999cbf1780f46aad2c6a4f350436bb0407554426b47974322f5a  analyze.py
+732ac8e6b9d4cf45e720ce12e62be00dfd24bae134de77c7bbdc4114b38da8e7  detect_stack.py
+
+AMENDMENT 1 (recorded 2026-10-17T00:26:28Z, before any model was called)
+Scope reduced to Anthropic models only: claude-opus-5-5, claude-sonnet-5-5, claude-haiku-5-5.
+Consequences: H1 is evaluated across the three Claude models instead of three vendors; H6 (vendor spread)
+is not tested. All results will be reported as "Claude models", never as "AI models" in general.
+Arm B runs Claude Code only (bare mode, file tools only). App builders remain optional and manual.
+models.json SHA-256: a9d55dc7ec30b0d2ba544c94ccbc993c0e9799295163df1e134296d2612b633c
+
+AMENDMENT 2 (recorded 2026-10-17T00:35:41Z)
+Pilot build run (todo-1) discarded: the agent could see "supabase" in the working directory path
+(.../supabase-schema-teardown/...) and referred to it. All build runs now execute in a neutrally
+named temp folder (<system temp>/agent-build-study/app-<task>-<n>) and are copied to data/builds afterwards.
+Pilot cost: $0.42, 17 turns, claude-opus-5-5. Arm A is unaffected (API calls carry no file path).
+
+DEVIATION 1 (recorded 2026-10-20T12:02:47Z, after results)
+The judge validation was not done by a human. Two blind Claude Opus 5.5 second readers labelled the 100
+random answers in data/hand_labels.csv without seeing the judge's labels (data/second_reader_labels.csv).
+Exact agreement 92/100 (threshold 90%), Supabase yes/no agreement 96/100. Because the check is not
+independent of Claude, results are reported with both metrics (judge and first-named) as a range.
+A human check remains open.

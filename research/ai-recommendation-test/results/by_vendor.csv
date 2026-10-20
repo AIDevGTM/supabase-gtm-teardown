@@ -1,0 +1,2 @@
+segment,n,first_pick_pct,ci_low,ci_high,mention_pct,share_of_voice_pct,mean_position,first_pick_Firebase,first_pick_Neon,first_pick_Convex,first_pick_PlanetScale,first_pick_AWS RDS/Aurora,first_pick_Appwrite,first_pick_MongoDB Atlas,first_pick_Postgres (generic)
+anthropic,900,46.9,43.6,50.2,93.8,15.5,2.34,4.8,13.9,2.2,0.0,0.6,0.0,0.0,21.2

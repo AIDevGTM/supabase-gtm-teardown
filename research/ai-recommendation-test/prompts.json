@@ -1,0 +1,42 @@
+[
+  {"id": "gen-1", "group": "generic_backend", "persona": "beginner", "text": "I'm building my first web app with AI tools and I need somewhere to store data and let people log in. What should I use?"},
+  {"id": "gen-2", "group": "generic_backend", "persona": "senior", "text": "Starting a new web app. I need a database and user authentication. What would you pick and why?"},
+  {"id": "gen-3", "group": "generic_backend", "persona": "cto", "text": "We're a two-person startup building an MVP. Which backend should we use for the database and auth so we can ship fast but not regret it later?"},
+  {"id": "gen-4", "group": "generic_backend", "persona": "beginner", "text": "What's the easiest way to add a database and sign-up to my app?"},
+  {"id": "gen-5", "group": "generic_backend", "persona": "senior", "text": "What's the best backend-as-a-service in 2026?"},
+  {"id": "gen-6", "group": "generic_backend", "persona": "cto", "text": "Recommend one backend platform for a new B2B SaaS product. Database, auth, file storage. Just give me your top pick."},
+
+  {"id": "fb-1", "group": "firebase_alt", "persona": "senior", "text": "What's a good alternative to Firebase?"},
+  {"id": "fb-2", "group": "firebase_alt", "persona": "beginner", "text": "I don't want to use Firebase. What should I use instead for my app's database and login?"},
+  {"id": "fb-3", "group": "firebase_alt", "persona": "cto", "text": "We're on Firebase and outgrowing Firestore's querying. What should we migrate to?"},
+  {"id": "fb-4", "group": "firebase_alt", "persona": "senior", "text": "Is there an open source Firebase alternative you'd recommend?"},
+  {"id": "fb-5", "group": "firebase_alt", "persona": "senior", "text": "I want something like Firebase but with a SQL database. Options?"},
+
+  {"id": "stk-1", "group": "stack_specific", "persona": "senior", "text": "Best backend for a Next.js SaaS app with auth and Stripe payments?"},
+  {"id": "stk-2", "group": "stack_specific", "persona": "beginner", "text": "I'm making a React Native app. Where should I store user data and handle logins?"},
+  {"id": "stk-3", "group": "stack_specific", "persona": "senior", "text": "What database and auth would you use with SvelteKit?"},
+  {"id": "stk-4", "group": "stack_specific", "persona": "cto", "text": "We're building a Flutter app for iOS and Android. Which backend should we standardise on?"},
+  {"id": "stk-5", "group": "stack_specific", "persona": "senior", "text": "I'm deploying a frontend on Vercel. What should I use for the database?"},
+  {"id": "stk-6", "group": "stack_specific", "persona": "beginner", "text": "I built a website with an AI website builder and now I need a real backend. What should I connect?"},
+
+  {"id": "ai-1", "group": "ai_app", "persona": "senior", "text": "I'm building an AI chat app. Where should I store conversations and embeddings?"},
+  {"id": "ai-2", "group": "ai_app", "persona": "cto", "text": "What's the simplest stack for a RAG app with user accounts? I don't want to run five services."},
+  {"id": "ai-3", "group": "ai_app", "persona": "senior", "text": "Which database should I use for vector search plus normal relational data in one place?"},
+  {"id": "ai-4", "group": "ai_app", "persona": "beginner", "text": "I'm making an AI app where each user has their own saved chats. What backend do I need?"},
+  {"id": "ai-5", "group": "ai_app", "persona": "cto", "text": "We're building AI agents that each need their own small database. What would you use?"},
+
+  {"id": "rt-1", "group": "realtime", "persona": "senior", "text": "I need a backend for a realtime multiplayer whiteboard. What would you use?"},
+  {"id": "rt-2", "group": "realtime", "persona": "beginner", "text": "How do I make a chat app where messages show up instantly for everyone? What backend should I use?"},
+  {"id": "rt-3", "group": "realtime", "persona": "cto", "text": "Which managed backend gives us realtime subscriptions on database changes with the least effort?"},
+  {"id": "rt-4", "group": "realtime", "persona": "senior", "text": "Best way to push live database updates to a web client?"},
+
+  {"id": "pg-1", "group": "postgres_hosting", "persona": "cto", "text": "Where should a new startup host Postgres?"},
+  {"id": "pg-2", "group": "postgres_hosting", "persona": "senior", "text": "What's the best managed Postgres for a side project that might grow?"},
+  {"id": "pg-3", "group": "postgres_hosting", "persona": "senior", "text": "Serverless Postgres options compared: which would you pick?"},
+  {"id": "pg-4", "group": "postgres_hosting", "persona": "beginner", "text": "I want to use Postgres but I don't want to manage a server. What should I use?"},
+
+  {"id": "ctl-1", "group": "control", "persona": "cto", "text": "I need a data warehouse for about 10 TB of event data for analytics. What should we use?"},
+  {"id": "ctl-2", "group": "control", "persona": "senior", "text": "What should I use as a cache in front of my API to cut latency?"},
+  {"id": "ctl-3", "group": "control", "persona": "senior", "text": "Best database for high-volume time-series data from IoT sensors?"},
+  {"id": "ctl-4", "group": "control", "persona": "cto", "text": "We're a bank migrating off on-prem Oracle and need strict data residency. What should we move to?"}
+]

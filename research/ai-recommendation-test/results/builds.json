@@ -1,0 +1,13 @@
+{
+ "tool": "Claude Code (bare mode, file tools only, no shell or network), claude-opus-5-5",
+ "runs": 15,
+ "asked_a_question": 0,
+ "tasks": [
+  {"sort": 1, "task": "To-do app with sign-up and saved tasks", "runs": 3, "backend": "SQLite (local)"},
+  {"sort": 2, "task": "SaaS starter with Stripe subscription", "runs": 3, "backend": "SQLite (local), via Prisma"},
+  {"sort": 3, "task": "AI chat app that saves history", "runs": 3, "backend": "SQLite (local)"},
+  {"sort": 4, "task": "Internal sales dashboard", "runs": 3, "backend": "SQLite (local)"},
+  {"sort": 5, "task": "Realtime chat room", "runs": 3, "backend": "No database: in memory (browser storage in one run)"}
+ ],
+ "notes": "realtime_chat-2 and -3 were classified by hand: detect_stack.py found no database; both keep messages in server memory. Build spend: $9.12 across the 8 runs on 20 Oct 2026."
+}

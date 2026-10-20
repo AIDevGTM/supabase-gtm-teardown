@@ -1,0 +1,2229 @@
+{
+ "source_notes": {
+  "stars": "OSS Insight daily stargazer history (built from GH Archive), 2020-01-15 to 2025-09-26. Later points: 100,000 stars per Supabase blog 2026-04-02; 111,659 per GitHub API 2026-10-17.",
+  "hn": "Hacker News Algolia API: stories with 'supabase' in title or URL, 2020-01 to 2026-10-17.",
+  "launch_weeks": "Dates from clusters of daily launch posts in supabase.com/rss.xml; lift = avg new stars/day in launch week / avg new stars/day in the 4 weeks before it (excluding the week immediately before).",
+  "taglines": "Wayback Machine captures of supabase.io and supabase.com, meta description, title and H1."
+ },
+ "stars_weekly": [
+  {
+   "d": "2020-01-20",
+   "stars": 18
+  },
+  {
+   "d": "2020-01-27",
+   "stars": 57
+  },
+  {
+   "d": "2020-02-03",
+   "stars": 69
+  },
+  {
+   "d": "2020-02-10",
+   "stars": 70
+  },
+  {
+   "d": "2020-02-17",
+   "stars": 70
+  },
+  {
+   "d": "2020-02-24",
+   "stars": 72
+  },
+  {
+   "d": "2020-03-02",
+   "stars": 74
+  },
+  {
+   "d": "2020-03-09",
+   "stars": 76
+  },
+  {
+   "d": "2020-03-16",
+   "stars": 80
+  },
+  {
+   "d": "2020-03-23",
+   "stars": 82
+  },
+  {
+   "d": "2020-03-30",
+   "stars": 84
+  },
+  {
+   "d": "2020-04-06",
+   "stars": 109
+  },
+  {
+   "d": "2020-04-13",
+   "stars": 111
+  },
+  {
+   "d": "2020-04-20",
+   "stars": 150
+  },
+  {
+   "d": "2020-04-27",
+   "stars": 151
+  },
+  {
+   "d": "2020-05-04",
+   "stars": 169
+  },
+  {
+   "d": "2020-05-11",
+   "stars": 191
+  },
+  {
+   "d": "2020-05-18",
+   "stars": 200
+  },
+  {
+   "d": "2020-05-25",
+   "stars": 204
+  },
+  {
+   "d": "2020-06-01",
+   "stars": 1308
+  },
+  {
+   "d": "2020-06-08",
+   "stars": 1566
+  },
+  {
+   "d": "2020-06-15",
+   "stars": 1631
+  },
+  {
+   "d": "2020-06-22",
+   "stars": 1673
+  },
+  {
+   "d": "2020-06-29",
+   "stars": 1725
+  },
+  {
+   "d": "2020-07-06",
+   "stars": 1750
+  },
+  {
+   "d": "2020-07-13",
+   "stars": 1783
+  },
+  {
+   "d": "2020-07-20",
+   "stars": 1793
+  },
+  {
+   "d": "2020-07-27",
+   "stars": 1810
+  },
+  {
+   "d": "2020-08-03",
+   "stars": 1834
+  },
+  {
+   "d": "2020-08-10",
+   "stars": 2008
+  },
+  {
+   "d": "2020-08-17",
+   "stars": 2043
+  },
+  {
+   "d": "2020-08-24",
+   "stars": 2069
+  },
+  {
+   "d": "2020-08-31",
+   "stars": 2129
+  },
+  {
+   "d": "2020-09-07",
+   "stars": 2177
+  },
+  {
+   "d": "2020-09-14",
+   "stars": 2214
+  },
+  {
+   "d": "2020-09-21",
+   "stars": 2237
+  },
+  {
+   "d": "2020-09-28",
+   "stars": 2284
+  },
+  {
+   "d": "2020-10-05",
+   "stars": 2325
+  },
+  {
+   "d": "2020-10-12",
+   "stars": 2375
+  },
+  {
+   "d": "2020-10-19",
+   "stars": 2433
+  },
+  {
+   "d": "2020-10-26",
+   "stars": 2495
+  },
+  {
+   "d": "2020-11-02",
+   "stars": 2585
+  },
+  {
+   "d": "2020-11-09",
+   "stars": 2740
+  },
+  {
+   "d": "2020-11-16",
+   "stars": 2795
+  },
+  {
+   "d": "2020-11-23",
+   "stars": 2902
+  },
+  {
+   "d": "2020-11-30",
+   "stars": 3037
+  },
+  {
+   "d": "2020-12-07",
+   "stars": 3751
+  },
+  {
+   "d": "2020-12-14",
+   "stars": 4020
+  },
+  {
+   "d": "2020-12-21",
+   "stars": 4293
+  },
+  {
+   "d": "2020-12-28",
+   "stars": 4495
+  },
+  {
+   "d": "2021-01-04",
+   "stars": 4688
+  },
+  {
+   "d": "2021-01-11",
+   "stars": 4827
+  },
+  {
+   "d": "2021-01-18",
+   "stars": 4977
+  },
+  {
+   "d": "2021-01-25",
+   "stars": 5154
+  },
+  {
+   "d": "2021-02-01",
+   "stars": 5330
+  },
+  {
+   "d": "2021-02-08",
+   "stars": 5592
+  },
+  {
+   "d": "2021-02-15",
+   "stars": 5768
+  },
+  {
+   "d": "2021-02-22",
+   "stars": 5940
+  },
+  {
+   "d": "2021-03-01",
+   "stars": 6235
+  },
+  {
+   "d": "2021-03-08",
+   "stars": 6365
+  },
+  {
+   "d": "2021-03-15",
+   "stars": 6559
+  },
+  {
+   "d": "2021-03-22",
+   "stars": 6695
+  },
+  {
+   "d": "2021-03-29",
+   "stars": 6866
+  },
+  {
+   "d": "2021-04-05",
+   "stars": 7300
+  },
+  {
+   "d": "2021-04-12",
+   "stars": 7551
+  },
+  {
+   "d": "2021-04-19",
+   "stars": 8497
+  },
+  {
+   "d": "2021-04-26",
+   "stars": 9427
+  },
+  {
+   "d": "2021-05-03",
+   "stars": 11292
+  },
+  {
+   "d": "2021-05-10",
+   "stars": 11764
+  },
+  {
+   "d": "2021-05-17",
+   "stars": 12031
+  },
+  {
+   "d": "2021-05-24",
+   "stars": 12344
+  },
+  {
+   "d": "2021-05-31",
+   "stars": 12649
+  },
+  {
+   "d": "2021-06-07",
+   "stars": 12861
+  },
+  {
+   "d": "2021-06-14",
+   "stars": 13109
+  },
+  {
+   "d": "2021-06-21",
+   "stars": 13399
+  },
+  {
+   "d": "2021-06-28",
+   "stars": 13593
+  },
+  {
+   "d": "2021-07-05",
+   "stars": 13831
+  },
+  {
+   "d": "2021-07-12",
+   "stars": 14101
+  },
+  {
+   "d": "2021-07-19",
+   "stars": 14319
+  },
+  {
+   "d": "2021-07-26",
+   "stars": 14684
+  },
+  {
+   "d": "2021-08-02",
+   "stars": 15850
+  },
+  {
+   "d": "2021-08-09",
+   "stars": 16324
+  },
+  {
+   "d": "2021-08-16",
+   "stars": 16670
+  },
+  {
+   "d": "2021-08-23",
+   "stars": 16961
+  },
+  {
+   "d": "2021-08-30",
+   "stars": 17187
+  },
+  {
+   "d": "2021-09-06",
+   "stars": 17459
+  },
+  {
+   "d": "2021-09-13",
+   "stars": 18230
+  },
+  {
+   "d": "2021-09-20",
+   "stars": 18560
+  },
+  {
+   "d": "2021-09-27",
+   "stars": 18849
+  },
+  {
+   "d": "2021-10-04",
+   "stars": 19174
+  },
+  {
+   "d": "2021-10-11",
+   "stars": 19389
+  },
+  {
+   "d": "2021-10-18",
+   "stars": 19486
+  },
+  {
+   "d": "2021-10-25",
+   "stars": 19537
+  },
+  {
+   "d": "2021-11-01",
+   "stars": 19754
+  },
+  {
+   "d": "2021-11-08",
+   "stars": 20115
+  },
+  {
+   "d": "2021-11-15",
+   "stars": 20368
+  },
+  {
+   "d": "2021-11-22",
+   "stars": 20910
+  },
+  {
+   "d": "2021-11-29",
+   "stars": 21476
+  },
+  {
+   "d": "2021-12-06",
+   "stars": 22885
+  },
+  {
+   "d": "2021-12-13",
+   "stars": 23523
+  },
+  {
+   "d": "2021-12-20",
+   "stars": 23941
+  },
+  {
+   "d": "2021-12-27",
+   "stars": 24319
+  },
+  {
+   "d": "2022-01-03",
+   "stars": 24734
+  },
+  {
+   "d": "2022-01-10",
+   "stars": 25093
+  },
+  {
+   "d": "2022-01-17",
+   "stars": 25411
+  },
+  {
+   "d": "2022-01-24",
+   "stars": 25769
+  },
+  {
+   "d": "2022-01-31",
+   "stars": 26222
+  },
+  {
+   "d": "2022-02-07",
+   "stars": 26577
+  },
+  {
+   "d": "2022-02-14",
+   "stars": 26817
+  },
+  {
+   "d": "2022-02-21",
+   "stars": 27377
+  },
+  {
+   "d": "2022-02-28",
+   "stars": 27900
+  },
+  {
+   "d": "2022-03-07",
+   "stars": 28161
+  },
+  {
+   "d": "2022-03-14",
+   "stars": 28401
+  },
+  {
+   "d": "2022-03-21",
+   "stars": 28632
+  },
+  {
+   "d": "2022-03-28",
+   "stars": 29111
+  },
+  {
+   "d": "2022-04-04",
+   "stars": 29493
+  },
+  {
+   "d": "2022-04-11",
+   "stars": 29757
+  },
+  {
+   "d": "2022-04-18",
+   "stars": 30099
+  },
+  {
+   "d": "2022-04-25",
+   "stars": 30384
+  },
+  {
+   "d": "2022-05-02",
+   "stars": 30580
+  },
+  {
+   "d": "2022-05-09",
+   "stars": 30778
+  },
+  {
+   "d": "2022-05-16",
+   "stars": 32074
+  },
+  {
+   "d": "2022-05-23",
+   "stars": 32355
+  },
+  {
+   "d": "2022-05-30",
+   "stars": 32663
+  },
+  {
+   "d": "2022-06-06",
+   "stars": 32898
+  },
+  {
+   "d": "2022-06-13",
+   "stars": 33115
+  },
+  {
+   "d": "2022-06-20",
+   "stars": 33371
+  },
+  {
+   "d": "2022-06-27",
+   "stars": 33549
+  },
+  {
+   "d": "2022-07-04",
+   "stars": 33751
+  },
+  {
+   "d": "2022-07-11",
+   "stars": 34041
+  },
+  {
+   "d": "2022-07-18",
+   "stars": 34385
+  },
+  {
+   "d": "2022-07-25",
+   "stars": 34574
+  },
+  {
+   "d": "2022-08-01",
+   "stars": 34788
+  },
+  {
+   "d": "2022-08-08",
+   "stars": 35027
+  },
+  {
+   "d": "2022-08-15",
+   "stars": 35281
+  },
+  {
+   "d": "2022-08-22",
+   "stars": 36388
+  },
+  {
+   "d": "2022-08-29",
+   "stars": 36847
+  },
+  {
+   "d": "2022-09-05",
+   "stars": 37104
+  },
+  {
+   "d": "2022-09-12",
+   "stars": 37393
+  },
+  {
+   "d": "2022-09-19",
+   "stars": 37678
+  },
+  {
+   "d": "2022-09-26",
+   "stars": 37875
+  },
+  {
+   "d": "2022-10-03",
+   "stars": 38098
+  },
+  {
+   "d": "2022-10-10",
+   "stars": 38306
+  },
+  {
+   "d": "2022-10-17",
+   "stars": 38544
+  },
+  {
+   "d": "2022-10-24",
+   "stars": 38869
+  },
+  {
+   "d": "2022-10-31",
+   "stars": 39107
+  },
+  {
+   "d": "2022-11-07",
+   "stars": 39323
+  },
+  {
+   "d": "2022-11-14",
+   "stars": 39565
+  },
+  {
+   "d": "2022-11-21",
+   "stars": 39789
+  },
+  {
+   "d": "2022-11-28",
+   "stars": 40365
+  },
+  {
+   "d": "2022-12-05",
+   "stars": 40685
+  },
+  {
+   "d": "2022-12-12",
+   "stars": 41031
+  },
+  {
+   "d": "2022-12-19",
+   "stars": 41455
+  },
+  {
+   "d": "2022-12-26",
+   "stars": 41828
+  },
+  {
+   "d": "2023-01-02",
+   "stars": 42255
+  },
+  {
+   "d": "2023-01-09",
+   "stars": 42598
+  },
+  {
+   "d": "2023-01-16",
+   "stars": 42909
+  },
+  {
+   "d": "2023-01-23",
+   "stars": 43228
+  },
+  {
+   "d": "2023-01-30",
+   "stars": 43570
+  },
+  {
+   "d": "2023-02-06",
+   "stars": 43959
+  },
+  {
+   "d": "2023-02-13",
+   "stars": 44379
+  },
+  {
+   "d": "2023-02-20",
+   "stars": 44697
+  },
+  {
+   "d": "2023-02-27",
+   "stars": 45004
+  },
+  {
+   "d": "2023-03-06",
+   "stars": 45288
+  },
+  {
+   "d": "2023-03-13",
+   "stars": 45586
+  },
+  {
+   "d": "2023-03-20",
+   "stars": 45887
+  },
+  {
+   "d": "2023-03-27",
+   "stars": 46175
+  },
+  {
+   "d": "2023-04-03",
+   "stars": 46461
+  },
+  {
+   "d": "2023-04-10",
+   "stars": 46850
+  },
+  {
+   "d": "2023-04-17",
+   "stars": 47382
+  },
+  {
+   "d": "2023-04-24",
+   "stars": 47708
+  },
+  {
+   "d": "2023-05-01",
+   "stars": 48085
+  },
+  {
+   "d": "2023-05-08",
+   "stars": 48384
+  },
+  {
+   "d": "2023-05-15",
+   "stars": 48852
+  },
+  {
+   "d": "2023-05-22",
+   "stars": 49195
+  },
+  {
+   "d": "2023-05-29",
+   "stars": 49582
+  },
+  {
+   "d": "2023-06-05",
+   "stars": 49955
+  },
+  {
+   "d": "2023-06-12",
+   "stars": 50281
+  },
+  {
+   "d": "2023-06-19",
+   "stars": 50629
+  },
+  {
+   "d": "2023-06-26",
+   "stars": 50972
+  },
+  {
+   "d": "2023-07-03",
+   "stars": 51302
+  },
+  {
+   "d": "2023-07-10",
+   "stars": 51624
+  },
+  {
+   "d": "2023-07-17",
+   "stars": 51993
+  },
+  {
+   "d": "2023-07-24",
+   "stars": 52322
+  },
+  {
+   "d": "2023-07-31",
+   "stars": 52710
+  },
+  {
+   "d": "2023-08-07",
+   "stars": 53099
+  },
+  {
+   "d": "2023-08-14",
+   "stars": 53694
+  },
+  {
+   "d": "2023-08-21",
+   "stars": 54135
+  },
+  {
+   "d": "2023-08-28",
+   "stars": 54497
+  },
+  {
+   "d": "2023-09-04",
+   "stars": 54824
+  },
+  {
+   "d": "2023-09-11",
+   "stars": 55137
+  },
+  {
+   "d": "2023-09-18",
+   "stars": 55446
+  },
+  {
+   "d": "2023-09-25",
+   "stars": 55708
+  },
+  {
+   "d": "2023-10-02",
+   "stars": 55951
+  },
+  {
+   "d": "2023-10-09",
+   "stars": 56397
+  },
+  {
+   "d": "2023-10-16",
+   "stars": 56639
+  },
+  {
+   "d": "2023-10-23",
+   "stars": 56933
+  },
+  {
+   "d": "2023-10-30",
+   "stars": 57174
+  },
+  {
+   "d": "2023-11-06",
+   "stars": 57574
+  },
+  {
+   "d": "2023-11-13",
+   "stars": 57973
+  },
+  {
+   "d": "2023-11-20",
+   "stars": 58214
+  },
+  {
+   "d": "2023-11-27",
+   "stars": 58537
+  },
+  {
+   "d": "2023-12-04",
+   "stars": 58815
+  },
+  {
+   "d": "2023-12-11",
+   "stars": 59039
+  },
+  {
+   "d": "2023-12-18",
+   "stars": 59313
+  },
+  {
+   "d": "2023-12-25",
+   "stars": 59543
+  },
+  {
+   "d": "2024-01-01",
+   "stars": 59747
+  },
+  {
+   "d": "2024-01-08",
+   "stars": 60033
+  },
+  {
+   "d": "2024-01-15",
+   "stars": 60447
+  },
+  {
+   "d": "2024-01-22",
+   "stars": 60756
+  },
+  {
+   "d": "2024-01-29",
+   "stars": 61046
+  },
+  {
+   "d": "2024-02-05",
+   "stars": 61325
+  },
+  {
+   "d": "2024-02-12",
+   "stars": 61557
+  },
+  {
+   "d": "2024-02-19",
+   "stars": 61817
+  },
+  {
+   "d": "2024-02-26",
+   "stars": 62076
+  },
+  {
+   "d": "2024-03-04",
+   "stars": 62374
+  },
+  {
+   "d": "2024-03-11",
+   "stars": 62683
+  },
+  {
+   "d": "2024-03-18",
+   "stars": 62985
+  },
+  {
+   "d": "2024-03-25",
+   "stars": 63241
+  },
+  {
+   "d": "2024-04-01",
+   "stars": 63500
+  },
+  {
+   "d": "2024-04-08",
+   "stars": 63774
+  },
+  {
+   "d": "2024-04-15",
+   "stars": 64111
+  },
+  {
+   "d": "2024-04-22",
+   "stars": 64535
+  },
+  {
+   "d": "2024-04-29",
+   "stars": 64856
+  },
+  {
+   "d": "2024-05-06",
+   "stars": 65146
+  },
+  {
+   "d": "2024-05-13",
+   "stars": 65461
+  },
+  {
+   "d": "2024-05-20",
+   "stars": 65687
+  },
+  {
+   "d": "2024-05-27",
+   "stars": 65895
+  },
+  {
+   "d": "2024-06-03",
+   "stars": 66118
+  },
+  {
+   "d": "2024-06-10",
+   "stars": 66334
+  },
+  {
+   "d": "2024-06-17",
+   "stars": 66569
+  },
+  {
+   "d": "2024-06-24",
+   "stars": 66811
+  },
+  {
+   "d": "2024-07-01",
+   "stars": 67026
+  },
+  {
+   "d": "2024-07-08",
+   "stars": 67589
+  },
+  {
+   "d": "2024-07-15",
+   "stars": 67864
+  },
+  {
+   "d": "2024-07-22",
+   "stars": 68553
+  },
+  {
+   "d": "2024-07-29",
+   "stars": 68765
+  },
+  {
+   "d": "2024-08-05",
+   "stars": 68985
+  },
+  {
+   "d": "2024-08-12",
+   "stars": 69260
+  },
+  {
+   "d": "2024-08-19",
+   "stars": 69532
+  },
+  {
+   "d": "2024-08-26",
+   "stars": 69775
+  },
+  {
+   "d": "2024-09-02",
+   "stars": 70050
+  },
+  {
+   "d": "2024-09-09",
+   "stars": 70331
+  },
+  {
+   "d": "2024-09-16",
+   "stars": 70573
+  },
+  {
+   "d": "2024-09-23",
+   "stars": 70874
+  },
+  {
+   "d": "2024-09-30",
+   "stars": 71140
+  },
+  {
+   "d": "2024-10-07",
+   "stars": 71369
+  },
+  {
+   "d": "2024-10-14",
+   "stars": 71649
+  },
+  {
+   "d": "2024-10-21",
+   "stars": 71914
+  },
+  {
+   "d": "2024-10-28",
+   "stars": 72156
+  },
+  {
+   "d": "2024-11-04",
+   "stars": 72390
+  },
+  {
+   "d": "2024-11-11",
+   "stars": 72639
+  },
+  {
+   "d": "2024-11-18",
+   "stars": 72934
+  },
+  {
+   "d": "2024-11-25",
+   "stars": 73166
+  },
+  {
+   "d": "2024-12-02",
+   "stars": 73519
+  },
+  {
+   "d": "2024-12-09",
+   "stars": 73812
+  },
+  {
+   "d": "2024-12-16",
+   "stars": 74058
+  },
+  {
+   "d": "2024-12-23",
+   "stars": 74314
+  },
+  {
+   "d": "2024-12-30",
+   "stars": 74625
+  },
+  {
+   "d": "2025-01-06",
+   "stars": 74881
+  },
+  {
+   "d": "2025-01-13",
+   "stars": 75139
+  },
+  {
+   "d": "2025-01-20",
+   "stars": 75429
+  },
+  {
+   "d": "2025-01-27",
+   "stars": 75694
+  },
+  {
+   "d": "2025-02-03",
+   "stars": 75948
+  },
+  {
+   "d": "2025-02-10",
+   "stars": 76298
+  },
+  {
+   "d": "2025-02-17",
+   "stars": 76647
+  },
+  {
+   "d": "2025-02-24",
+   "stars": 77049
+  },
+  {
+   "d": "2025-03-03",
+   "stars": 77388
+  },
+  {
+   "d": "2025-03-10",
+   "stars": 77994
+  },
+  {
+   "d": "2025-03-17",
+   "stars": 78366
+  },
+  {
+   "d": "2025-03-24",
+   "stars": 78705
+  },
+  {
+   "d": "2025-03-31",
+   "stars": 79080
+  },
+  {
+   "d": "2025-04-07",
+   "stars": 79467
+  },
+  {
+   "d": "2025-04-14",
+   "stars": 79847
+  },
+  {
+   "d": "2025-04-21",
+   "stars": 80168
+  },
+  {
+   "d": "2025-04-28",
+   "stars": 80594
+  },
+  {
+   "d": "2025-05-05",
+   "stars": 80993
+  },
+  {
+   "d": "2025-05-12",
+   "stars": 81477
+  },
+  {
+   "d": "2025-05-19",
+   "stars": 81872
+  },
+  {
+   "d": "2025-05-26",
+   "stars": 82199
+  },
+  {
+   "d": "2025-06-02",
+   "stars": 82435
+  },
+  {
+   "d": "2025-06-09",
+   "stars": 82671
+  },
+  {
+   "d": "2025-06-16",
+   "stars": 82867
+  },
+  {
+   "d": "2025-06-23",
+   "stars": 83026
+  },
+  {
+   "d": "2025-06-30",
+   "stars": 83217
+  },
+  {
+   "d": "2025-07-07",
+   "stars": 83403
+  },
+  {
+   "d": "2025-07-14",
+   "stars": 83608
+  },
+  {
+   "d": "2025-07-21",
+   "stars": 83788
+  },
+  {
+   "d": "2025-07-28",
+   "stars": 84009
+  },
+  {
+   "d": "2025-08-04",
+   "stars": 84179
+  },
+  {
+   "d": "2025-08-11",
+   "stars": 84407
+  },
+  {
+   "d": "2025-08-18",
+   "stars": 84622
+  },
+  {
+   "d": "2025-08-25",
+   "stars": 84809
+  },
+  {
+   "d": "2025-09-01",
+   "stars": 84987
+  },
+  {
+   "d": "2025-09-08",
+   "stars": 85110
+  },
+  {
+   "d": "2025-09-15",
+   "stars": 85389
+  },
+  {
+   "d": "2025-09-22",
+   "stars": 85558
+  },
+  {
+   "d": "2025-09-26",
+   "stars": 85707
+  }
+ ],
+ "stars_later": [
+  {
+   "d": "2026-04-02",
+   "stars": 100000,
+   "src": "Supabase blog: 100,000 GitHub stars"
+  },
+  {
+   "d": "2026-10-17",
+   "stars": 111659,
+   "src": "GitHub API"
+  }
+ ],
+ "milestones": [
+  {
+   "stars": 1000,
+   "d": "2020-05-28"
+  },
+  {
+   "stars": 10000,
+   "d": "2021-05-01"
+  },
+  {
+   "stars": 25000,
+   "d": "2022-01-09"
+  },
+  {
+   "stars": 50000,
+   "d": "2023-06-06"
+  },
+  {
+   "stars": 75000,
+   "d": "2025-01-09"
+  },
+  {
+   "stars": 100000,
+   "d": "2026-04-02"
+  }
+ ],
+ "biggest_days": [
+  {
+   "d": "2020-05-27",
+   "new_stars": 522
+  },
+  {
+   "d": "2021-05-01",
+   "new_stars": 516
+  },
+  {
+   "d": "2021-12-01",
+   "new_stars": 455
+  },
+  {
+   "d": "2021-05-02",
+   "new_stars": 445
+  },
+  {
+   "d": "2021-05-03",
+   "new_stars": 365
+  },
+  {
+   "d": "2020-12-04",
+   "new_stars": 363
+  },
+  {
+   "d": "2021-04-17",
+   "new_stars": 348
+  },
+  {
+   "d": "2021-07-29",
+   "new_stars": 305
+  },
+  {
+   "d": "2021-12-02",
+   "new_stars": 303
+  },
+  {
+   "d": "2020-05-28",
+   "new_stars": 292
+  }
+ ],
+ "launch_weeks": [
+  {
+   "name": "LW1",
+   "start": "2021-03-29",
+   "week_per_day": 56.3,
+   "base_per_day": 27.0,
+   "after_per_day": 151.6,
+   "lift": 2.08,
+   "stars_at_start": 6866
+  },
+  {
+   "name": "LW2",
+   "start": "2021-07-26",
+   "week_per_day": 164.1,
+   "base_per_day": 33.2,
+   "after_per_day": 41.1,
+   "lift": 4.94,
+   "stars_at_start": 14684
+  },
+  {
+   "name": "LW3",
+   "start": "2021-11-29",
+   "week_per_day": 192.6,
+   "base_per_day": 43.4,
+   "after_per_day": 57.0,
+   "lift": 4.44,
+   "stars_at_start": 21476
+  },
+  {
+   "name": "LW4",
+   "start": "2022-03-28",
+   "week_per_day": 59.0,
+   "base_per_day": 50.8,
+   "after_per_day": 37.0,
+   "lift": 1.16,
+   "stars_at_start": 29111
+  },
+  {
+   "name": "LW5",
+   "start": "2022-08-15",
+   "week_per_day": 136.9,
+   "base_per_day": 37.0,
+   "after_per_day": 37.1,
+   "lift": 3.7,
+   "stars_at_start": 35281
+  },
+  {
+   "name": "LW6",
+   "start": "2022-12-12",
+   "week_per_day": 59.7,
+   "base_per_day": 47.8,
+   "after_per_day": 50.7,
+   "lift": 1.25,
+   "stars_at_start": 41031
+  },
+  {
+   "name": "LW7",
+   "start": "2023-04-10",
+   "week_per_day": 79.9,
+   "base_per_day": 41.8,
+   "after_per_day": 53.1,
+   "lift": 1.91,
+   "stars_at_start": 46850
+  },
+  {
+   "name": "LW8",
+   "start": "2023-08-07",
+   "week_per_day": 87.3,
+   "base_per_day": 49.6,
+   "after_per_day": 47.0,
+   "lift": 1.76,
+   "stars_at_start": 53099
+  },
+  {
+   "name": "LWX",
+   "start": "2023-12-11",
+   "week_per_day": 39.1,
+   "base_per_day": 46.5,
+   "after_per_day": 42.1,
+   "lift": 0.84,
+   "stars_at_start": 59039
+  },
+  {
+   "name": "GA Week",
+   "start": "2024-04-15",
+   "week_per_day": 66.4,
+   "base_per_day": 38.9,
+   "after_per_day": 37.6,
+   "lift": 1.71,
+   "stars_at_start": 64111
+  },
+  {
+   "name": "LW12",
+   "start": "2024-08-12",
+   "week_per_day": 41.3,
+   "base_per_day": 50.6,
+   "after_per_day": 39.2,
+   "lift": 0.82,
+   "stars_at_start": 69260
+  },
+  {
+   "name": "LW13",
+   "start": "2024-12-02",
+   "week_per_day": 40.6,
+   "base_per_day": 35.4,
+   "after_per_day": 38.6,
+   "lift": 1.15,
+   "stars_at_start": 73519
+  },
+  {
+   "name": "LW14",
+   "start": "2025-03-31",
+   "week_per_day": 59.3,
+   "base_per_day": 59.6,
+   "after_per_day": 58.1,
+   "lift": 1.0,
+   "stars_at_start": 79080
+  },
+  {
+   "name": "LW15",
+   "start": "2025-07-14",
+   "week_per_day": 24.4,
+   "base_per_day": 26.2,
+   "after_per_day": 29.0,
+   "lift": 0.93,
+   "stars_at_start": 83608
+  }
+ ],
+ "hn_100plus": [
+  {
+   "date": "2020-05-27",
+   "points": 1120,
+   "comments": 366,
+   "title": "Supabase (YC S20): An open source Firebase alternative",
+   "author": "vira28",
+   "id": "23319901",
+   "kind": "supabase"
+  },
+  {
+   "date": "2020-07-09",
+   "points": 197,
+   "comments": 33,
+   "title": "PostgreSQL Templates",
+   "author": "kiwicopple",
+   "id": "23781786",
+   "kind": "postgres"
+  },
+  {
+   "date": "2020-08-06",
+   "points": 173,
+   "comments": 50,
+   "title": "Auth is now available in Supabase (YC S20)",
+   "author": "kiwicopple",
+   "id": "24072051",
+   "kind": "supabase"
+  },
+  {
+   "date": "2020-12-03",
+   "points": 217,
+   "comments": 50,
+   "title": "Supabase Beta: Auth, SQL Editor, Benchmarks",
+   "author": "kiwicopple",
+   "id": "25289233",
+   "kind": "supabase"
+  },
+  {
+   "date": "2021-03-30",
+   "points": 194,
+   "comments": 76,
+   "title": "Storage is now available in Supabase (YC S20)",
+   "author": "kiwicopple",
+   "id": "26635184",
+   "kind": "supabase"
+  },
+  {
+   "date": "2021-04-28",
+   "points": 280,
+   "comments": 89,
+   "title": "Listen to your to PostgreSQL database in realtime via WebSockets",
+   "author": "gmac",
+   "id": "26968449",
+   "kind": "postgres"
+  },
+  {
+   "date": "2021-07-02",
+   "points": 100,
+   "comments": 15,
+   "title": "Protecting reserved roles with PostgreSQL Hooks",
+   "author": "steve-chavez",
+   "id": "27712800",
+   "kind": "postgres"
+  },
+  {
+   "date": "2021-09-06",
+   "points": 130,
+   "comments": 28,
+   "title": "Show HN: Postgres Docker image with common extensions",
+   "author": "kiwicopple",
+   "id": "28430439",
+   "kind": "postgres"
+  },
+  {
+   "date": "2021-12-01",
+   "points": 169,
+   "comments": 33,
+   "title": "Realtime Postgres Row Level Security",
+   "author": "kiwicopple",
+   "id": "29404222",
+   "kind": "postgres"
+  },
+  {
+   "date": "2021-12-01",
+   "points": 331,
+   "comments": 39,
+   "title": "Supabase open sourced their dashboard",
+   "author": "zwarag",
+   "id": "29401589",
+   "kind": "supabase"
+  },
+  {
+   "date": "2021-12-03",
+   "points": 431,
+   "comments": 99,
+   "title": "Pg_GraphQL: A GraphQL Extension for PostgreSQL",
+   "author": "samwillis",
+   "id": "29430720",
+   "kind": "postgres"
+  },
+  {
+   "date": "2022-03-09",
+   "points": 313,
+   "comments": 77,
+   "title": "Postgres Auditing in 150 lines of SQL",
+   "author": "oliverrice",
+   "id": "30615470",
+   "kind": "postgres"
+  },
+  {
+   "date": "2022-03-29",
+   "points": 222,
+   "comments": 47,
+   "title": "GraphQL is now available on Supabase",
+   "author": "yurisagalov",
+   "id": "30846006",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-03-31",
+   "points": 268,
+   "comments": 64,
+   "title": "Supabase Edge Functions",
+   "author": "lightslit",
+   "id": "30868849",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-05-10",
+   "points": 247,
+   "comments": 126,
+   "title": "Supabase (YC S20) raises $80M Series B",
+   "author": "yurisagalov",
+   "id": "31328783",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-07-18",
+   "points": 197,
+   "comments": 52,
+   "title": "Implementing \"seen by\" functionality with Postgres",
+   "author": "kiwicopple",
+   "id": "32138790",
+   "kind": "postgres"
+  },
+  {
+   "date": "2022-07-21",
+   "points": 203,
+   "comments": 56,
+   "title": "Show HN: Pg_jsonschema: A Postgres extension for JSON validation",
+   "author": "oliverrice",
+   "id": "32179856",
+   "kind": "postgres"
+  },
+  {
+   "date": "2022-08-10",
+   "points": 129,
+   "comments": 64,
+   "title": "How to market to developers on Twitter: Learnings from 4 months of Supabase feed",
+   "author": "kuba_dmp",
+   "id": "32412036",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-08-16",
+   "points": 162,
+   "comments": 78,
+   "title": "Supabase-JS v2",
+   "author": "samuba",
+   "id": "32484286",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-08-18",
+   "points": 356,
+   "comments": 143,
+   "title": "Supabase: Realtime: Multiplayer Edition",
+   "author": "samwillis",
+   "id": "32510405",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-08-20",
+   "points": 198,
+   "comments": 70,
+   "title": "Supabase Vault",
+   "author": "traviskuhl",
+   "id": "32532313",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-09-13",
+   "points": 158,
+   "comments": 25,
+   "title": "Show HN: pg_netstat, a Postgres extension to monitor database network traffic",
+   "author": "burmecia",
+   "id": "32823589",
+   "kind": "postgres"
+  },
+  {
+   "date": "2022-10-03",
+   "points": 887,
+   "comments": 185,
+   "title": "Postgres WASM",
+   "author": "kiwicopple",
+   "id": "33067962",
+   "kind": "postgres"
+  },
+  {
+   "date": "2022-10-14",
+   "points": 338,
+   "comments": 117,
+   "title": "Postgres Full Text Search vs. the Rest",
+   "author": "kiwicopple",
+   "id": "33203370",
+   "kind": "postgres"
+  },
+  {
+   "date": "2022-12-10",
+   "points": 296,
+   "comments": 38,
+   "title": "Show HN: Pg_CRDT: an experimental CRDT extension for Postgres",
+   "author": "kiwicopple",
+   "id": "33931971",
+   "kind": "postgres"
+  },
+  {
+   "date": "2022-12-13",
+   "points": 109,
+   "comments": 30,
+   "title": "Supabase Storage v2: Image Resizing and Smart CDN",
+   "author": "samwillis",
+   "id": "33969076",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-12-15",
+   "points": 122,
+   "comments": 46,
+   "title": "Supabase Wrappers: A framework for building Postgres foreign data wrappers",
+   "author": "yurisagalov",
+   "id": "34001493",
+   "kind": "supabase"
+  },
+  {
+   "date": "2022-12-16",
+   "points": 132,
+   "comments": 28,
+   "title": "Supabase Vault is now in Beta",
+   "author": "samuba",
+   "id": "34015167",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-01-20",
+   "points": 220,
+   "comments": 160,
+   "title": "Choosing a Postgres primary key",
+   "author": "awalias",
+   "id": "34451344",
+   "kind": "postgres"
+  },
+  {
+   "date": "2023-02-06",
+   "points": 256,
+   "comments": 54,
+   "title": "Storing OpenAI embeddings in Postgres with pgvector",
+   "author": "kiwicopple",
+   "id": "34684593",
+   "kind": "postgres"
+  },
+  {
+   "date": "2023-02-07",
+   "points": 129,
+   "comments": 54,
+   "title": "Supabase Clippy: ChatGPT for Supabase Docs",
+   "author": "kiwicopple",
+   "id": "34695306",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-02-17",
+   "points": 134,
+   "comments": 46,
+   "title": "Type constraints in 65 lines of SQL",
+   "author": "oliverrice",
+   "id": "34835063",
+   "kind": "postgres"
+  },
+  {
+   "date": "2023-02-25",
+   "points": 252,
+   "comments": 62,
+   "title": "Using GPT3, Supabase and Pinecone to automate a personalized marketing campaign",
+   "author": "vimota",
+   "id": "34939053",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-03-22",
+   "points": 219,
+   "comments": 44,
+   "title": "Pg_jsonschema: JSON Schema Support for Postgres",
+   "author": "awalias",
+   "id": "35258323",
+   "kind": "postgres"
+  },
+  {
+   "date": "2023-04-09",
+   "points": 149,
+   "comments": 49,
+   "title": "Show HN: Supavisor: a Postgres connection pooler written in Elixir",
+   "author": "kiwicopple",
+   "id": "35501718",
+   "kind": "postgres"
+  },
+  {
+   "date": "2023-04-10",
+   "points": 237,
+   "comments": 67,
+   "title": "Supabase Logs: open-source logging server",
+   "author": "arranf",
+   "id": "35518786",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-04-11",
+   "points": 349,
+   "comments": 102,
+   "title": "Supabase Edge Runtime: Self-Hosted Deno Functions",
+   "author": "creativedg",
+   "id": "35525222",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-04-12",
+   "points": 188,
+   "comments": 57,
+   "title": "Supabase Storage v3: Resumable Uploads with support for 50GB files",
+   "author": "creativedg",
+   "id": "35538977",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-04-13",
+   "points": 183,
+   "comments": 64,
+   "title": "Supabase Auth: SSO, Mobile, and Server-Side Support",
+   "author": "bennyp101",
+   "id": "35555263",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-05-19",
+   "points": 382,
+   "comments": 134,
+   "title": "Migrating from Supabase",
+   "author": "stevekrouse",
+   "id": "36004925",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-05-25",
+   "points": 155,
+   "comments": 32,
+   "title": "ChatGPT plugins now support Postgres and Supabase",
+   "author": "cendenta",
+   "id": "36072524",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-08-06",
+   "points": 963,
+   "comments": 119,
+   "title": "Postgres Language Server",
+   "author": "kiwicopple",
+   "id": "37020610",
+   "kind": "postgres"
+  },
+  {
+   "date": "2023-08-09",
+   "points": 182,
+   "comments": 52,
+   "title": "Supabase Local Dev: migrations, branching, and observability",
+   "author": "kiwicopple",
+   "id": "37059400",
+   "kind": "supabase"
+  },
+  {
+   "date": "2023-12-08",
+   "points": 162,
+   "comments": 46,
+   "title": "Postgres Language Server: Implementing the Parser",
+   "author": "todsacerdoti",
+   "id": "38568252",
+   "kind": "postgres"
+  },
+  {
+   "date": "2023-12-15",
+   "points": 292,
+   "comments": 118,
+   "title": "Fly Postgres, Managed by Supabase",
+   "author": "samwillis",
+   "id": "38653212",
+   "kind": "supabase"
+  },
+  {
+   "date": "2024-01-22",
+   "points": 341,
+   "comments": 210,
+   "title": "Should I open source my company? (2022)",
+   "author": "AnhTho_FR",
+   "id": "39087837",
+   "kind": "postgres"
+  },
+  {
+   "date": "2024-04-14",
+   "points": 417,
+   "comments": 97,
+   "title": "Show HN: PostgreSQL index advisor",
+   "author": "kiwicopple",
+   "id": "40028111",
+   "kind": "postgres"
+  },
+  {
+   "date": "2024-04-15",
+   "points": 272,
+   "comments": 100,
+   "title": "We are moving to General Availability",
+   "author": "jimmcslim",
+   "id": "40039191",
+   "kind": "postgres"
+  },
+  {
+   "date": "2024-04-19",
+   "points": 501,
+   "comments": 187,
+   "title": "Supabase Storage now supports the S3 protocol",
+   "author": "inian",
+   "id": "40083807",
+   "kind": "supabase"
+  },
+  {
+   "date": "2024-08-10",
+   "points": 216,
+   "comments": 28,
+   "title": "Show HN: Pg_replicate: Build Postgres replication applications in Rust",
+   "author": "imor80",
+   "id": "41209994",
+   "kind": "postgres"
+  },
+  {
+   "date": "2024-08-12",
+   "points": 366,
+   "comments": 106,
+   "title": "Postgres.new: In-browser Postgres with an AI interface",
+   "author": "kiwicopple",
+   "id": "41224286",
+   "kind": "postgres"
+  },
+  {
+   "date": "2024-12-10",
+   "points": 185,
+   "comments": 67,
+   "title": "Running Durable Workflows in Postgres Using DBOS",
+   "author": "kiwicopple",
+   "id": "42379974",
+   "kind": "postgres"
+  },
+  {
+   "date": "2025-02-27",
+   "points": 164,
+   "comments": 44,
+   "title": "Postgres as a Graph Database: (Ab)Using PgRouting",
+   "author": "michelpp",
+   "id": "43198520",
+   "kind": "postgres"
+  },
+  {
+   "date": "2025-03-29",
+   "points": 362,
+   "comments": 52,
+   "title": "Postgres Language Server: Initial Release",
+   "author": "steinroe",
+   "id": "43513996",
+   "kind": "postgres"
+  },
+  {
+   "date": "2025-04-22",
+   "points": 342,
+   "comments": 342,
+   "title": "Supabase raises $200M Series D at $2B valuation",
+   "author": "baristaGeek",
+   "id": "43763225",
+   "kind": "supabase"
+  },
+  {
+   "date": "2025-07-03",
+   "points": 205,
+   "comments": 126,
+   "title": "Poor Man's Back End-as-a-Service (BaaS), Similar to Firebase/Supabase/Pocketbase",
+   "author": "dcu",
+   "id": "44456135",
+   "kind": "supabase"
+  },
+  {
+   "date": "2025-07-08",
+   "points": 848,
+   "comments": 470,
+   "title": "Supabase MCP can leak your entire SQL database",
+   "author": "rexpository",
+   "id": "44502318",
+   "kind": "supabase"
+  },
+  {
+   "date": "2025-09-10",
+   "points": 413,
+   "comments": 153,
+   "title": "OrioleDB Patent: now freely available to the Postgres community",
+   "author": "tosh",
+   "id": "45196173",
+   "kind": "postgres"
+  },
+  {
+   "date": "2025-12-22",
+   "points": 112,
+   "comments": 64,
+   "title": "Your Supabase is public if you turn off RLS",
+   "author": "skilldeliver",
+   "id": "46355345",
+   "kind": "supabase"
+  },
+  {
+   "date": "2026-05-06",
+   "points": 304,
+   "comments": 240,
+   "title": "From Supabase to Clerk to Better Auth",
+   "author": "stevekrouse",
+   "id": "48038827",
+   "kind": "supabase"
+  },
+  {
+   "date": "2026-10-02",
+   "points": 222,
+   "comments": 117,
+   "title": "Supabase is acquiring Turso",
+   "author": "cvburgess",
+   "id": "49934784",
+   "kind": "supabase"
+  }
+ ],
+ "taglines": [
+  {
+   "d": "2020-04-04",
+   "site": "supabase.io",
+   "line": "realtime postgres.",
+   "src": "https://web.archive.org/web/20200404030411/https://supabase.io/"
+  },
+  {
+   "d": "2020-05-25",
+   "site": "supabase.io",
+   "line": "realtime postgres.",
+   "src": "https://web.archive.org/web/20200525090756/https://supabase.io/"
+  },
+  {
+   "d": "2020-05-27",
+   "site": "supabase.io",
+   "line": "The opensource Firebase alternative.",
+   "src": "https://web.archive.org/web/20200527071540/https://supabase.io/",
+   "note": "captured 07:15 UTC; Show HN posted 06:13 UTC the same day; 'opensource' typo"
+  },
+  {
+   "d": "2020-06-15",
+   "site": "supabase.io",
+   "line": "The open source Firebase alternative.",
+   "src": "https://web.archive.org/web/20200615040043/https://supabase.io/",
+   "note": "typo fixed"
+  },
+  {
+   "d": "2022-07-01",
+   "site": "supabase.com",
+   "line": "Build in a weekend. Scale to millions.",
+   "src": "https://web.archive.org/web/20220701/https://supabase.com/",
+   "note": "new H1; page title still 'The Open Source Firebase Alternative'"
+  },
+  {
+   "d": "2025-07-01",
+   "site": "supabase.com",
+   "line": "The Postgres Development Platform.",
+   "src": "https://web.archive.org/web/20250701012242/https://supabase.com/",
+   "note": "page title changes; still 'The Open Source Firebase Alternative' on 2025-04-01"
+  }
+ ],
+ "wayback_quarterly": [
+  {
+   "q": "2020Q1",
+   "ts": "20200310080644",
+   "url": "https://supabase.io/",
+   "title": "",
+   "desc": "",
+   "h1": ""
+  },
+  {
+   "q": "2020Q2",
+   "ts": "20200404030411",
+   "url": "https://supabase.io/",
+   "title": "Supabase | Supabase",
+   "desc": "realtime postgres.",
+   "h1": ""
+  },
+  {
+   "q": "2020Q3",
+   "ts": "20200701164356",
+   "url": "https://supabase.io/",
+   "title": "Supabase | Supabase",
+   "desc": "The open source Firebase alternative.",
+   "h1": ""
+  },
+  {
+   "q": "2020Q4",
+   "ts": "20201018002814",
+   "url": "https://supabase.io/",
+   "title": "Supabase | Supabase",
+   "desc": "The open source Firebase alternative.",
+   "h1": ""
+  },
+  {
+   "q": "2021Q1",
+   "ts": "20210112071802",
+   "url": "https://supabase.io/",
+   "title": "",
+   "desc": "",
+   "h1": ""
+  },
+  {
+   "q": "2021Q2",
+   "ts": "20210402152335",
+   "url": "https://supabase.io/",
+   "title": "The Open Source Firebase Alternative | Supabase",
+   "desc": "The Open Source Alternative to Firebase.",
+   "h1": "The Open Source Firebase Alternative"
+  },
+  {
+   "q": "2021Q3",
+   "ts": "20210703122422",
+   "url": "https://supabase.io/",
+   "title": "The Open Source Firebase Alternative | Supabase",
+   "desc": "The Open Source Alternative to Firebase.",
+   "h1": "The Open Source Firebase Alternative"
+  },
+  {
+   "q": "2021Q4",
+   "ts": "20211002005852",
+   "url": "https://supabase.io/",
+   "title": "The Open Source Firebase Alternative | Supabase",
+   "desc": "The Open Source Alternative to Firebase.",
+   "h1": "The Open Source Firebase Alternative"
+  },
+  {
+   "q": "2022Q1",
+   "ts": "20220102024812",
+   "url": "https://supabase.com/",
+   "title": "",
+   "desc": "",
+   "h1": ""
+  },
+  {
+   "q": "2022Q2",
+   "ts": "20220401012653",
+   "url": "https://supabase.com/",
+   "title": "The Open Source Firebase Alternative | Supabase",
+   "desc": "The Open Source Alternative to Firebase.",
+   "h1": "The Open Source Firebase Alternative"
+  },
+  {
+   "q": "2022Q3",
+   "ts": "20220701054014",
+   "url": "https://supabase.com/",
+   "title": "The Open Source Firebase Alternative | Supabase",
+   "desc": "The Open Source Alternative to Firebase.",
+   "h1": "Build in a weekend. Scale to millions."
+  },
+  {
+   "q": "2022Q4",
+   "ts": "20221001153556",
+   "url": "https://supabase.com/",
+   "title": "The Open Source Firebase Alternative | Supabase",
+   "desc": "The Open Source Alternative to Firebase.",
+   "h1": "Build in a weekend. Scale to millions."
+  },
+  {
+   "q": "2023Q1",
+   "ts": "20230101073529",
+   "url": "https://supabase.com/",
+   "title": "The Open Source Firebase Alternative | Supabase",
+   "desc": "The Open Source Alternative to Firebase.",
+   "h1": "Build in a weekend. Scale to millions."
+  },
+  {
+   "q": "2023Q2",
+   "ts": "20230401131904",
+   "url": "https://supabase.com/",
+   "title": "The Open Source Firebase Alternative | Supabase",
+   "desc": "The Open Source Alternative to Firebase.",
+   "h1": "Build in a weekend. Scale to millions."
+  },
+  {
+   "q": "2023Q3",
+   "ts": "20230701201849",
+   "url": "https://supabase.com/",
+   "title": "",
+   "desc": "",
+   "h1": ""
+  },
+  {
+   "q": "2023Q4",
+   "ts": "20231002061202",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Open Source Firebase Alternative",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2024Q1",
+   "ts": "20240101090037",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Open Source Firebase Alternative",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2024Q2",
+   "ts": "20240401172422",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Open Source Firebase Alternative",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2024Q3",
+   "ts": "20240801",
+   "url": "https://supabase.com/",
+   "title": "",
+   "desc": "",
+   "h1": ""
+  },
+  {
+   "q": "2024Q4",
+   "ts": "20241001003809",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Open Source Firebase Alternative",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2025Q1",
+   "ts": "20250102011429",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Open Source Firebase Alternative",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2025Q2",
+   "ts": "20250401071537",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Open Source Firebase Alternative",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2025Q3",
+   "ts": "20250701012242",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Postgres Development Platform.",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2025Q4",
+   "ts": "20251001010017",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Postgres Development Platform.",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2026Q1",
+   "ts": "20260101013524",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Postgres Development Platform.",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2026Q2",
+   "ts": "20260401014133",
+   "url": "https://supabase.com/",
+   "title": "Supabase | The Postgres Development Platform.",
+   "desc": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+   "h1": "Build in a weekend Scale to millions"
+  },
+  {
+   "q": "2026Q3",
+   "ts": "20260701004302",
+   "url": "https://supabase.com/",
+   "title": "",
+   "desc": "",
+   "h1": ""
+  },
+  {
+   "q": "2026Q4",
+   "ts": "20261001022640",
+   "url": "https://supabase.com/",
+   "title": "",
+   "desc": "",
+   "h1": ""
+  }
+ ]
+}

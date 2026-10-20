@@ -1,0 +1,603 @@
+{
+ "metric": "primary",
+ "responses": 1020,
+ "overall_excluding_controls": {
+  "n": 900,
+  "first_pick": [
+   46.9,
+   43.6,
+   50.2
+  ],
+  "mention": [
+   93.8,
+   92.0,
+   95.2
+  ],
+  "clarify": [
+   0.0,
+   0.0,
+   0.4
+  ],
+  "share_of_voice_pct": 15.5,
+  "mean_position_when_mentioned": 2.34,
+  "head_to_head_first_pick": {
+   "Supabase": 46.9,
+   "Firebase": 4.8,
+   "Neon": 13.9,
+   "Convex": 2.2,
+   "PlanetScale": 0.0,
+   "AWS RDS/Aurora": 0.6,
+   "Appwrite": 0.0,
+   "MongoDB Atlas": 0.0,
+   "Postgres (generic)": 21.2
+  }
+ },
+ "controls": {
+  "n": 120,
+  "first_pick": [
+   0.0,
+   0,
+   3.1
+  ],
+  "mention": [
+   0.0,
+   0,
+   3.1
+  ],
+  "clarify": [
+   0.0,
+   0,
+   3.1
+  ],
+  "share_of_voice_pct": 0.0,
+  "mean_position_when_mentioned": null,
+  "head_to_head_first_pick": {
+   "Supabase": 0.0,
+   "Firebase": 0.0,
+   "Neon": 0.0,
+   "Convex": 0.0,
+   "PlanetScale": 0.0,
+   "AWS RDS/Aurora": 0.0,
+   "Appwrite": 0.0,
+   "MongoDB Atlas": 0.0,
+   "Postgres (generic)": 5.0
+  }
+ },
+ "by_model": {
+  "Claude Opus 5.5": {
+   "n": 300,
+   "first_pick": [
+    47.7,
+    42.1,
+    53.3
+   ],
+   "mention": [
+    95.3,
+    92.3,
+    97.2
+   ],
+   "clarify": [
+    0.0,
+    0,
+    1.3
+   ],
+   "share_of_voice_pct": 14.9,
+   "mean_position_when_mentioned": 2.31,
+   "head_to_head_first_pick": {
+    "Supabase": 47.7,
+    "Firebase": 3.7,
+    "Neon": 15.7,
+    "Convex": 3.3,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 19.7
+   }
+  },
+  "Claude Sonnet 5.5": {
+   "n": 300,
+   "first_pick": [
+    46.3,
+    40.8,
+    52.0
+   ],
+   "mention": [
+    93.7,
+    90.3,
+    95.9
+   ],
+   "clarify": [
+    0.0,
+    0,
+    1.3
+   ],
+   "share_of_voice_pct": 15.0,
+   "mean_position_when_mentioned": 2.44,
+   "head_to_head_first_pick": {
+    "Supabase": 46.3,
+    "Firebase": 3.7,
+    "Neon": 15.0,
+    "Convex": 3.3,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 20.7
+   }
+  },
+  "Claude Haiku 5.5": {
+   "n": 300,
+   "first_pick": [
+    46.7,
+    41.1,
+    52.3
+   ],
+   "mention": [
+    92.3,
+    88.8,
+    94.8
+   ],
+   "clarify": [
+    0.0,
+    0,
+    1.3
+   ],
+   "share_of_voice_pct": 16.9,
+   "mean_position_when_mentioned": 2.26,
+   "head_to_head_first_pick": {
+    "Supabase": 46.7,
+    "Firebase": 7.0,
+    "Neon": 11.0,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 1.7,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 23.3
+   }
+  }
+ },
+ "by_vendor": {
+  "anthropic": {
+   "n": 900,
+   "first_pick": [
+    46.9,
+    43.6,
+    50.2
+   ],
+   "mention": [
+    93.8,
+    92.0,
+    95.2
+   ],
+   "clarify": [
+    0.0,
+    0.0,
+    0.4
+   ],
+   "share_of_voice_pct": 15.5,
+   "mean_position_when_mentioned": 2.34,
+   "head_to_head_first_pick": {
+    "Supabase": 46.9,
+    "Firebase": 4.8,
+    "Neon": 13.9,
+    "Convex": 2.2,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.6,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 21.2
+   }
+  }
+ },
+ "by_group": {
+  "generic_backend": {
+   "n": 180,
+   "first_pick": [
+    86.1,
+    80.3,
+    90.4
+   ],
+   "mention": [
+    100.0,
+    97.9,
+    100
+   ],
+   "clarify": [
+    0.0,
+    0,
+    2.1
+   ],
+   "share_of_voice_pct": 18.4,
+   "mean_position_when_mentioned": 1.32,
+   "head_to_head_first_pick": {
+    "Supabase": 86.1,
+    "Firebase": 0.0,
+    "Neon": 0.0,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 13.9
+   }
+  },
+  "firebase_alt": {
+   "n": 150,
+   "first_pick": [
+    82.0,
+    75.1,
+    87.3
+   ],
+   "mention": [
+    100.0,
+    97.5,
+    100
+   ],
+   "clarify": [
+    0.0,
+    0,
+    2.5
+   ],
+   "share_of_voice_pct": 11.3,
+   "mean_position_when_mentioned": 2.21,
+   "head_to_head_first_pick": {
+    "Supabase": 82.0,
+    "Firebase": 0.0,
+    "Neon": 0.0,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 18.0
+   }
+  },
+  "stack_specific": {
+   "n": 180,
+   "first_pick": [
+    42.8,
+    35.8,
+    50.1
+   ],
+   "mention": [
+    100.0,
+    97.9,
+    100
+   ],
+   "clarify": [
+    0.0,
+    0,
+    2.1
+   ],
+   "share_of_voice_pct": 18.6,
+   "mean_position_when_mentioned": 2.18,
+   "head_to_head_first_pick": {
+    "Supabase": 42.8,
+    "Firebase": 17.8,
+    "Neon": 17.8,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 20.6
+   }
+  },
+  "ai_app": {
+   "n": 150,
+   "first_pick": [
+    19.3,
+    13.8,
+    26.4
+   ],
+   "mention": [
+    74.0,
+    66.4,
+    80.4
+   ],
+   "clarify": [
+    0.0,
+    0,
+    2.5
+   ],
+   "share_of_voice_pct": 13.6,
+   "mean_position_when_mentioned": 3.43,
+   "head_to_head_first_pick": {
+    "Supabase": 19.3,
+    "Firebase": 0.0,
+    "Neon": 0.0,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 60.7
+   }
+  },
+  "realtime": {
+   "n": 120,
+   "first_pick": [
+    18.3,
+    12.4,
+    26.2
+   ],
+   "mention": [
+    85.8,
+    78.5,
+    91.0
+   ],
+   "clarify": [
+    0.0,
+    0,
+    3.1
+   ],
+   "share_of_voice_pct": 22.4,
+   "mean_position_when_mentioned": 2.75,
+   "head_to_head_first_pick": {
+    "Supabase": 18.3,
+    "Firebase": 9.2,
+    "Neon": 0.0,
+    "Convex": 16.7,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 4.2
+   }
+  },
+  "postgres_hosting": {
+   "n": 120,
+   "first_pick": [
+    13.3,
+    8.4,
+    20.6
+   ],
+   "mention": [
+    100.0,
+    96.9,
+    100
+   ],
+   "clarify": [
+    0.0,
+    0,
+    3.1
+   ],
+   "share_of_voice_pct": 13.5,
+   "mean_position_when_mentioned": 2.89,
+   "head_to_head_first_pick": {
+    "Supabase": 13.3,
+    "Firebase": 0.0,
+    "Neon": 77.5,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 4.2,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 5.0
+   }
+  },
+  "control": {
+   "n": 120,
+   "first_pick": [
+    0.0,
+    0,
+    3.1
+   ],
+   "mention": [
+    0.0,
+    0,
+    3.1
+   ],
+   "clarify": [
+    0.0,
+    0,
+    3.1
+   ],
+   "share_of_voice_pct": 0.0,
+   "mean_position_when_mentioned": null,
+   "head_to_head_first_pick": {
+    "Supabase": 0.0,
+    "Firebase": 0.0,
+    "Neon": 0.0,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 5.0
+   }
+  }
+ },
+ "by_persona": {
+  "beginner": {
+   "n": 240,
+   "first_pick": [
+    78.8,
+    73.1,
+    83.5
+   ],
+   "mention": [
+    100.0,
+    98.4,
+    100
+   ],
+   "clarify": [
+    0.0,
+    0,
+    1.6
+   ],
+   "share_of_voice_pct": 15.1,
+   "mean_position_when_mentioned": 1.75,
+   "head_to_head_first_pick": {
+    "Supabase": 78.8,
+    "Firebase": 5.8,
+    "Neon": 8.3,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 4.2
+   }
+  },
+  "senior": {
+   "n": 420,
+   "first_pick": [
+    34.8,
+    30.4,
+    39.4
+   ],
+   "mention": [
+    93.6,
+    90.8,
+    95.5
+   ],
+   "clarify": [
+    0.0,
+    0,
+    0.9
+   ],
+   "share_of_voice_pct": 14.4,
+   "mean_position_when_mentioned": 2.65,
+   "head_to_head_first_pick": {
+    "Supabase": 34.8,
+    "Firebase": 0.0,
+    "Neon": 21.9,
+    "Convex": 0.0,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 0.0,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 29.8
+   }
+  },
+  "cto": {
+   "n": 240,
+   "first_pick": [
+    36.2,
+    30.4,
+    42.5
+   ],
+   "mention": [
+    87.9,
+    83.2,
+    91.5
+   ],
+   "clarify": [
+    0.0,
+    0,
+    1.6
+   ],
+   "share_of_voice_pct": 18.9,
+   "mean_position_when_mentioned": 2.43,
+   "head_to_head_first_pick": {
+    "Supabase": 36.2,
+    "Firebase": 12.1,
+    "Neon": 5.4,
+    "Convex": 8.3,
+    "PlanetScale": 0.0,
+    "AWS RDS/Aurora": 2.1,
+    "Appwrite": 0.0,
+    "MongoDB Atlas": 0.0,
+    "Postgres (generic)": 23.3
+   }
+  }
+ },
+ "top_primary_overall": [
+  [
+   "Supabase",
+   422
+  ],
+  [
+   "Postgres (generic)",
+   191
+  ],
+  [
+   "Neon",
+   125
+  ],
+  [
+   "Firebase",
+   43
+  ],
+  [
+   "SQLite",
+   30
+  ],
+  [
+   "Server-Sent Events (SSE)",
+   23
+  ],
+  [
+   "Yjs",
+   22
+  ],
+  [
+   "Convex",
+   20
+  ],
+  [
+   "Node.js + Socket.IO",
+   6
+  ],
+  [
+   "AWS RDS/Aurora",
+   5
+  ],
+  [
+   "Node.js",
+   4
+  ],
+  [
+   "Cloudflare Durable Objects",
+   3
+  ]
+ ],
+ "hypotheses": {
+  "H1_generic_first_pick_over_50_all_vendors": {
+   "by_segment": {
+    "Claude Opus 5.5": 86.7,
+    "Claude Sonnet 5.5": 86.7,
+    "Claude Haiku 5.5": 85.0
+   },
+   "holds": true
+  },
+  "H2_firebase_alt_over_80": {
+   "value": [
+    82.0,
+    75.1,
+    87.3
+   ],
+   "holds": true
+  },
+  "H3_ai_below_generic": {
+   "ai": [
+    19.3,
+    13.8,
+    26.4
+   ],
+   "generic": [
+    86.1,
+    80.3,
+    90.4
+   ]
+  },
+  "H4_controls_under_10": {
+   "value": [
+    0.0,
+    0,
+    3.1
+   ],
+   "holds": true
+  },
+  "H6_vendor_spread_under_15": {
+   "tested": false,
+   "by_vendor": {
+    "anthropic": 46.9
+   },
+   "spread": 0.0
+  }
+ }
+}

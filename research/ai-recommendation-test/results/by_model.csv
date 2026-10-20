@@ -1,0 +1,4 @@
+segment,n,first_pick_pct,ci_low,ci_high,mention_pct,share_of_voice_pct,mean_position,first_pick_Firebase,first_pick_Neon,first_pick_Convex,first_pick_PlanetScale,first_pick_AWS RDS/Aurora,first_pick_Appwrite,first_pick_MongoDB Atlas,first_pick_Postgres (generic)
+Claude Opus 5.5,300,47.7,42.1,53.3,95.3,14.9,2.31,3.7,15.7,3.3,0.0,0.0,0.0,0.0,19.7
+Claude Sonnet 5.5,300,46.3,40.8,52.0,93.7,15.0,2.44,3.7,15.0,3.3,0.0,0.0,0.0,0.0,20.7
+Claude Haiku 5.5,300,46.7,41.1,52.3,92.3,16.9,2.26,7.0,11.0,0.0,0.0,1.7,0.0,0.0,23.3

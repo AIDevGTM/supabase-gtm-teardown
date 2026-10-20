@@ -1,0 +1,74 @@
+{
+ "answers": 1020,
+ "models": [
+  "Claude Haiku 5.5",
+  "Claude Opus 5.5",
+  "Claude Sonnet 5.5"
+ ],
+ "judge": "claude-sonnet-5-5",
+ "groups": [
+  {
+   "sort": 1,
+   "prompt_group": "Generic backend (database plus login)",
+   "answers": 180,
+   "supabase_judge": 155,
+   "supabase_first_mention": 149,
+   "top_pick": "Supabase",
+   "top_pick_n": 155
+  },
+  {
+   "sort": 2,
+   "prompt_group": "Firebase alternative",
+   "answers": 150,
+   "supabase_judge": 123,
+   "supabase_first_mention": 116,
+   "top_pick": "Supabase",
+   "top_pick_n": 123
+  },
+  {
+   "sort": 3,
+   "prompt_group": "Named stack (Next.js, Vercel, Flutter)",
+   "answers": 180,
+   "supabase_judge": 77,
+   "supabase_first_mention": 57,
+   "top_pick": "Supabase",
+   "top_pick_n": 77
+  },
+  {
+   "sort": 4,
+   "prompt_group": "AI app (chats, embeddings, RAG)",
+   "answers": 150,
+   "supabase_judge": 29,
+   "supabase_first_mention": 12,
+   "top_pick": "Plain Postgres",
+   "top_pick_n": 91
+  },
+  {
+   "sort": 5,
+   "prompt_group": "Realtime (chat, live updates)",
+   "answers": 120,
+   "supabase_judge": 22,
+   "supabase_first_mention": 20,
+   "top_pick": "Server-Sent Events",
+   "top_pick_n": 23
+  },
+  {
+   "sort": 6,
+   "prompt_group": "Postgres hosting",
+   "answers": 120,
+   "supabase_judge": 16,
+   "supabase_first_mention": 0,
+   "top_pick": "Neon",
+   "top_pick_n": 93
+  },
+  {
+   "sort": 7,
+   "prompt_group": "Controls (warehouse, time series, cache, Oracle)",
+   "answers": 120,
+   "supabase_judge": 0,
+   "supabase_first_mention": 0,
+   "top_pick": "TimescaleDB",
+   "top_pick_n": 29
+  }
+ ]
+}
