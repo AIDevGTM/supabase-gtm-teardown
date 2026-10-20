@@ -1,0 +1,13 @@
+{
+  "name": "realtime-chat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zero-dependency realtime multi-user chat room (Node.js + Server-Sent Events)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

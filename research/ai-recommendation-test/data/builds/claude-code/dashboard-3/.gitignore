@@ -1,0 +1,4 @@
+sales.db
+*.db-journal
+__pycache__/
+*.pyc

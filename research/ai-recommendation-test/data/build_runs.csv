@@ -1,0 +1,16 @@
+recorded_at,tool,model,task,run,asked_user,primary_backend,all_backends,evidence
+2026-10-17T06:24:32.257206+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,todo,3,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""dep:better-sqlite3"", ""text:\\.db\\b in server.js (+2)""]}"
+2026-10-17T06:27:18.958959+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,saas,1,False,SQLite (local),Prisma (DB unspecified);SQLite (local),"{""Prisma (DB unspecified)"": [""dep:prisma"", ""dep:@prisma/client""], ""SQLite (local)"": [""text:\\.db\\b in .env.example""]}"
+2026-10-17T06:30:37.408413+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,saas,2,False,SQLite (local),Prisma (DB unspecified);SQLite (local),"{""Prisma (DB unspecified)"": [""dep:prisma"", ""dep:@prisma/client""], ""SQLite (local)"": [""text:\\.db\\b in README.md (+1)""]}"
+2026-10-17T06:33:41.029935+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,saas,3,False,SQLite (local),Prisma (DB unspecified);SQLite (local),"{""Prisma (DB unspecified)"": [""dep:prisma"", ""dep:@prisma/client""], ""SQLite (local)"": [""text:\\.db\\b in README.md (+1)""]}"
+2026-10-17T06:36:22.771209+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,ai_chat,1,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""dep:better-sqlite3"", ""text:\\.db\\b in db.js (+3)""]}"
+2026-10-17T06:40:28.361298+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,ai_chat,2,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""dep:better-sqlite3"", ""text:\\.db\\b in server.js (+2)""]}"
+2026-10-17T06:42:39.766035+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,ai_chat,3,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""dep:better-sqlite3"", ""text:\\.db\\b in db.js (+1)""]}"
+2026-10-20T11:14:45.693887+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,todo,1,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""dep:better-sqlite3"", ""text:\\.db\\b in server.js (+2)""]}"
+2026-10-20T11:16:55.773204+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,todo,2,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""dep:better-sqlite3"", ""text:\\.sqlite3?\\b in server.js (+2)"", ""text:\\.db\\b in server.js""]}"
+2026-10-20T11:19:52.278401+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,realtime_chat,1,False,localStorage only,localStorage only,"{""localStorage only"": [""text:localStorage\\.setItem in public/app.js""]}"
+2026-10-20T11:22:06.889015+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,realtime_chat,2,False,,,{}
+2026-10-20T11:26:51.480614+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,realtime_chat,3,False,,,{}
+2026-10-20T11:31:22.611956+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,dashboard,1,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""text:\\.db\\b in server.py (+3)""]}"
+2026-10-20T11:35:45.032055+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,dashboard,2,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""text:\\.db\\b in server.py (+3)""]}"
+2026-10-20T11:41:16.008377+00:00,"Claude Code (bare, file tools only)",claude-opus-5-5,dashboard,3,False,SQLite (local),SQLite (local),"{""SQLite (local)"": [""text:\\.db\\b in .claude-run.json (+4)""]}"

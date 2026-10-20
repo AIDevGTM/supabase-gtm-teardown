@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>✓ To-Do</h1>
+
+    <!-- Auth view -->
+    <section id="auth-view" hidden>
+      <div class="tabs">
+        <button type="button" id="tab-login" class="tab active">Log in</button>
+        <button type="button" id="tab-signup" class="tab">Sign up</button>
+      </div>
+      <form id="auth-form">
+        <label>Email <input type="email" id="email" required autocomplete="email" /></label>
+        <label>Password <input type="password" id="password" required minlength="8" autocomplete="current-password" /></label>
+        <p id="auth-error" class="error" role="alert"></p>
+        <button type="submit" id="auth-submit" class="primary">Log in</button>
+      </form>
+    </section>
+
+    <!-- Tasks view -->
+    <section id="tasks-view" hidden>
+      <div class="topbar">
+        <span id="user-email"></span>
+        <button type="button" id="logout" class="link">Log out</button>
+      </div>
+      <form id="task-form" class="row">
+        <input id="task-input" placeholder="What needs doing?" maxlength="500" required />
+        <button type="submit" class="primary">Add</button>
+      </form>
+      <p id="task-error" class="error" role="alert"></p>
+      <ul id="task-list"></ul>
+      <p id="empty" class="muted" hidden>No tasks yet — add one above.</p>
+      <p id="count" class="muted"></p>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

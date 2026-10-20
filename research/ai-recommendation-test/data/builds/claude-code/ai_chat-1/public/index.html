@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Chat</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Auth screen -->
+  <section id="auth" class="auth hidden">
+    <form id="auth-form" class="auth-card">
+      <h1>AI Chat</h1>
+      <p class="muted" id="auth-subtitle">Sign in to continue your conversations.</p>
+      <label>Username
+        <input id="username" name="username" autocomplete="username" required minlength="3" maxlength="32" />
+      </label>
+      <label>Password
+        <input id="password" name="password" type="password" autocomplete="current-password" required minlength="8" />
+      </label>
+      <p id="auth-error" class="error" role="alert"></p>
+      <button type="submit" id="auth-submit">Sign in</button>
+      <p class="muted small">
+        <span id="auth-switch-text">No account?</span>
+        <a href="#" id="auth-switch">Create one</a>
+      </p>
+    </form>
+  </section>
+
+  <!-- Main app -->
+  <section id="app" class="app hidden">
+    <aside class="sidebar" id="sidebar">
+      <button id="new-chat" class="new-chat">+ New chat</button>
+      <nav id="convo-list" class="convo-list" aria-label="Conversations"></nav>
+      <div class="sidebar-footer">
+        <span id="whoami" class="muted small"></span>
+        <button id="logout" class="link-btn">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="chat">
+      <header class="chat-header">
+        <button id="toggle-sidebar" class="icon-btn" aria-label="Toggle conversations">☰</button>
+        <h2 id="chat-title">New chat</h2>
+      </header>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <form id="composer" class="composer">
+        <textarea id="input" rows="1" placeholder="Send a message…  (Enter to send, Shift+Enter for newline)" required></textarea>
+        <button type="submit" id="send">Send</button>
+      </form>
+    </main>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>

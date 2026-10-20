@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Sales Dashboard</h1>
+      <span class="tag">Internal</span>
+    </div>
+    <form class="filters" id="filters" autocomplete="off">
+      <label>
+        <span>Period</span>
+        <select id="preset">
+          <option value="7">Last 7 days</option>
+          <option value="30" selected>Last 30 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="365">Last 12 months</option>
+          <option value="custom">Custom</option>
+        </select>
+      </label>
+      <label>
+        <span>From</span>
+        <input type="date" id="start" required>
+      </label>
+      <label>
+        <span>To</span>
+        <input type="date" id="end" required>
+      </label>
+      <label>
+        <span>Region</span>
+        <select id="region">
+          <option value="">All regions</option>
+        </select>
+      </label>
+      <button type="submit" id="refresh" title="Reload data">Refresh</button>
+    </form>
+  </header>
+
+  <main>
+    <div class="error" id="error" role="alert" hidden></div>
+
+    <section class="kpis" aria-label="Key metrics">
+      <article class="card kpi" id="kpi-revenue">
+        <h2>Revenue</h2>
+        <div class="kpi-value">–</div>
+        <div class="kpi-delta"></div>
+      </article>
+      <article class="card kpi" id="kpi-orders">
+        <h2>Orders</h2>
+        <div class="kpi-value">–</div>
+        <div class="kpi-delta"></div>
+      </article>
+      <article class="card kpi" id="kpi-aov">
+        <h2>Avg order value</h2>
+        <div class="kpi-value">–</div>
+        <div class="kpi-delta"></div>
+      </article>
+      <article class="card kpi" id="kpi-units">
+        <h2>Units sold</h2>
+        <div class="kpi-value">–</div>
+        <div class="kpi-delta"></div>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Revenue over time</h2>
+        <span class="muted" id="granularity"></span>
+      </div>
+      <div class="chart" id="chart-timeseries"></div>
+    </section>
+
+    <div class="grid-2">
+      <section class="card">
+        <div class="card-head">
+          <h2>Revenue by region</h2>
+          <span class="muted">all regions, for comparison</span>
+        </div>
+        <div class="bars" id="chart-region"></div>
+      </section>
+      <section class="card">
+        <div class="card-head">
+          <h2>Revenue by category</h2>
+        </div>
+        <div class="bars" id="chart-category"></div>
+      </section>
+    </div>
+
+    <div class="grid-2">
+      <section class="card">
+        <div class="card-head">
+          <h2>Top products</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Product</th><th>Category</th><th class="num">Units</th><th class="num">Revenue</th></tr>
+            </thead>
+            <tbody id="table-products"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-head">
+          <h2>Recent orders</h2>
+          <span class="muted">all statuses</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>#</th><th>Date</th><th>Customer</th><th>Region</th><th>Status</th><th class="num">Total</th></tr>
+            </thead>
+            <tbody id="table-orders"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span id="footer-note">Revenue counts completed orders only. Refunds are listed separately.</span>
+    <span id="footer-updated"></span>
+  </footer>
+</body>
+</html>

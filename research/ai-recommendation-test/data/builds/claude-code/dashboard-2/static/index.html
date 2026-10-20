@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales Dashboard</title>
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #fff; --text: #1f2933; --muted: #6b7280; --border: #e5e7eb;
+    --accent: #2563eb; --accent-soft: rgba(37, 99, 235, .12); --up: #059669; --down: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         background: var(--bg); color: var(--text); }
+  header { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; justify-content: space-between;
+           padding: 16px 24px; background: var(--card); border-bottom: 1px solid var(--border); }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+  .filters label { color: var(--muted); font-size: 12px; display: flex; flex-direction: column; gap: 2px; }
+  input, select, button { font: inherit; padding: 6px 10px; border: 1px solid var(--border);
+                          border-radius: 6px; background: #fff; color: inherit; }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary, button.preset.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  main { padding: 24px; display: grid; gap: 16px; max-width: 1400px; margin: 0 auto; transition: opacity .15s; }
+  body.loading main { opacity: .55; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; min-width: 0; }
+  .card h2 { font-size: 12px; font-weight: 600; color: var(--muted); margin: 0 0 12px;
+             text-transform: uppercase; letter-spacing: .04em; }
+  .kpi-value { font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .delta { font-size: 12px; margin-top: 4px; color: var(--muted); }
+  .delta.up { color: var(--up); } .delta.down { color: var(--down); }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; }
+  #chart svg { display: block; width: 100%; height: auto; }
+  .bar-row { display: grid; grid-template-columns: 130px 1fr 80px; gap: 10px; align-items: center; margin: 8px 0; }
+  .bar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-track { background: var(--accent-soft); border-radius: 4px; height: 14px; overflow: hidden; }
+  .bar-fill { background: var(--accent); height: 100%; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 8px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; }
+  th.num { text-align: right; }
+  tr:last-child td { border-bottom: none; }
+  .status { padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+  .status.completed { background: #d1fae5; color: #065f46; }
+  .status.cancelled { background: #fee2e2; color: #991b1b; }
+  .status.refunded  { background: #fef3c7; color: #92400e; }
+  #error { display: none; background: #fee2e2; color: #991b1b; border: 1px solid #fecaca;
+           padding: 12px 16px; border-radius: 8px; }
+  .empty { color: var(--muted); padding: 24px 0; text-align: center; }
+  .muted { color: var(--muted); }
+  footer { color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body class="loading">
+<header>
+  <div>
+    <h1>Sales Dashboard</h1>
+    <div class="muted" id="subtitle">Loading…</div>
+  </div>
+  <form class="filters" id="filters">
+    <button type="button" class="preset" data-days="7">7D</button>
+    <button type="button" class="preset" data-days="30">30D</button>
+    <button type="button" class="preset" data-days="90">90D</button>
+    <button type="button" class="preset" data-days="365">1Y</button>
+    <label>From <input type="date" id="start" required></label>
+    <label>To <input type="date" id="end" required></label>
+    <label>Region
+      <select id="region"><option value="">All regions</option></select>
+    </label>
+    <button type="submit" class="primary">Apply</button>
+  </form>
+</header>
+
+<main>
+  <div id="error" role="alert"></div>
+
+  <section class="kpis">
+    <div class="card"><h2>Revenue</h2><div class="kpi-value" id="kpi-revenue">–</div><div class="delta" id="delta-revenue"></div></div>
+    <div class="card"><h2>Orders</h2><div class="kpi-value" id="kpi-orders">–</div><div class="delta" id="delta-orders"></div></div>
+    <div class="card"><h2>Avg order value</h2><div class="kpi-value" id="kpi-aov">–</div><div class="delta" id="delta-aov"></div></div>
+    <div class="card"><h2>Units sold</h2><div class="kpi-value" id="kpi-units">–</div><div class="delta" id="delta-units"></div></div>
+    <div class="card"><h2>Active customers</h2><div class="kpi-value" id="kpi-customers">–</div><div class="delta" id="delta-customers"></div></div>
+  </section>
+
+  <section class="card">
+    <h2 id="chart-title">Revenue over time</h2>
+    <div id="chart"></div>
+  </section>
+
+  <div class="grid-2">
+    <section class="card"><h2>Revenue by region</h2><div id="by-region"></div></section>
+    <section class="card"><h2>Revenue by category</h2><div id="by-category"></div></section>
+  </div>
+
+  <div class="grid-2">
+    <section class="card">
+      <h2>Top products</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Product</th><th>Category</th><th class="num">Units</th><th class="num">Revenue</th></tr></thead>
+          <tbody id="top-products"></tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Recent orders</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Order</th><th>Date</th><th>Customer</th><th>Region</th><th>Status</th><th class="num">Total</th></tr></thead>
+          <tbody id="recent-orders"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <footer id="footer"></footer>
+</main>
+
+<script>
+"use strict";
+
+const $ = (id) => document.getElementById(id);
+const moneyFmt = new Intl.NumberFormat(undefined, { style: "currency", currency: "USD" });
+const moneyShortFmt = new Intl.NumberFormat(undefined, {
+  style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1,
+});
+const intFmt = new Intl.NumberFormat();
+const fmtMoney = (cents) => moneyFmt.format(cents / 100);
+const fmtMoneyShort = (cents) => moneyShortFmt.format(cents / 100);
+const ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => ESCAPES[ch]);
+const EMPTY = '<div class="empty">No sales in this period</div>';
+
+let meta = null;
+let lastData = null;
+let requestSeq = 0;
+
+// All date math is done in UTC on YYYY-MM-DD strings so time zones can't shift a day.
+function addDays(iso, n) {
+  const d = new Date(iso + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+function fmtBucket(bucket, granularity) {
+  if (granularity === "month") {
+    return new Date(bucket + "-01T00:00:00Z")
+      .toLocaleDateString(undefined, { month: "short", year: "numeric", timeZone: "UTC" });
+  }
+  return new Date(bucket + "T00:00:00Z")
+    .toLocaleDateString(undefined, { month: "short", day: "numeric", timeZone: "UTC" });
+}
+
+async function fetchJSON(url) {
+  const res = await fetch(url, { headers: { Accept: "application/json" } });
+  let body = null;
+  try { body = await res.json(); } catch (_) { /* response body wasn't JSON */ }
+  if (!res.ok) throw new Error((body && body.error) || `Request failed (HTTP ${res.status})`);
+  return body;
+}
+
+function showError(msg) { const el = $("error"); el.textContent = msg; el.style.display = "block"; }
+function hideError() { $("error").style.display = "none"; }
+
+function markPreset(days) {
+  document.querySelectorAll(".preset").forEach((b) =>
+    b.classList.toggle("active", Number(b.dataset.days) === days));
+}
+
+function applyPreset(days) {
+  $("end").value = meta.max_date;
+  $("start").value = addDays(meta.max_date, -(days - 1));
+  markPreset(days);
+  load();
+}
+
+async function load() {
+  const params = new URLSearchParams();
+  if ($("start").value) params.set("start", $("start").value);
+  if ($("end").value) params.set("end", $("end").value);
+  if ($("region").value) params.set("region", $("region").value);
+  history.replaceState(null, "", "?" + params.toString());   // shareable URL
+
+  const seq = ++requestSeq;
+  document.body.classList.add("loading");
+  try {
+    const data = await fetchJSON("/api/dashboard?" + params.toString());
+    if (seq !== requestSeq) return;   // a newer request is in flight, so drop this result
+    hideError();
+    lastData = data;
+    render(data);
+  } catch (err) {
+    if (seq === requestSeq) showError(err.message);
+  } finally {
+    if (seq === requestSeq) document.body.classList.remove("loading");
+  }
+}
+
+function setKpi(name, text, cur, prev) {
+  $("kpi-" + name).textContent = text;
+  const el = $("delta-" + name);
+  if (!prev) { el.textContent = "No prior-period data"; el.className = "delta"; return; }
+  const pct = ((cur - prev) / prev) * 100;
+  el.textContent = `${pct >= 0 ? "▲" : "▼"} ${Math.abs(pct).toFixed(1)}% vs prior period`;
+  el.className = "delta " + (pct >= 0 ? "up" : "down");
+}
+
+function render(d) {
+  const f = d.filters;
+  $("start").value = f.start;
+  $("end").value = f.end;
+  $("subtitle").textContent =
+    `${f.start} to ${f.end} · ${f.region || "All regions"}`;
+
+  const k = d.kpis, p = d.previous_kpis;
+  setKpi("revenue", fmtMoney(k.revenue_cents), k.revenue_cents, p.revenue_cents);
+  setKpi("orders", intFmt.format(k.orders), k.orders, p.orders);
+  setKpi("aov", fmtMoney(k.avg_order_cents), k.avg_order_cents, p.avg_order_cents);
+  setKpi("units", intFmt.format(k.units), k.units, p.units);
+  setKpi("customers", intFmt.format(k.customers), k.customers, p.customers);
+
+  $("chart-title").textContent = `Revenue by ${d.timeseries.granularity}`;
+  renderChart($("chart"), d.timeseries);
+  renderBars($("by-region"), d.by_region);
+  renderBars($("by-category"), d.by_category);
+  renderTopProducts(d.top_products);
+  renderRecentOrders(d.recent_orders);
+
+  $("footer").textContent =
+    `Revenue, orders, units and customers count completed orders only. ` +
+    `Changes compare against ${d.previous_period.start} to ${d.previous_period.end}. ` +
+    `Data available ${meta.min_date} to ${meta.max_date}.`;
+}
+
+function niceMax(v) {
+  if (v <= 0) return 1;
+  const mag = Math.pow(10, Math.floor(Math.log10(v)));
+  const f = v / mag;
+  return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * mag;
+}
+
+function renderChart(el, ts) {
+  const pts = ts.points;
+  if (!pts.some((p) => p.revenue_cents > 0)) { el.innerHTML = EMPTY; return; }
+
+  const W = Math.max(el.clientWidth, 320), H = 280;
+  const m = { t: 12, r: 16, b: 28, l: 64 };
+  const iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const n = pts.length;
+  const maxV = niceMax(Math.max(...pts.map((p) => p.revenue_cents)));
+  const x = (i) => m.l + (n === 1 ? iw / 2 : (i * iw) / (n - 1));
+  const y = (v) => m.t + ih - (v / maxV) * ih;
+
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Revenue over time">`;
+  for (let i = 0; i <= 4; i++) {
+    const v = (maxV * i) / 4, yy = y(v).toFixed(1);
+    s += `<line x1="${m.l}" x2="${W - m.r}" y1="${yy}" y2="${yy}" stroke="#e5e7eb"/>`;
+    s += `<text x="${m.l - 8}" y="${(+yy + 4).toFixed(1)}" text-anchor="end" font-size="11" fill="#6b7280">${esc(fmtMoneyShort(v))}</text>`;
+  }
+
+  const line = pts.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p.revenue_cents).toFixed(1)}`).join("");
+  const base = y(0).toFixed(1);
+  s += `<path d="${line}L${x(n - 1).toFixed(1)},${base}L${x(0).toFixed(1)},${base}Z" fill="rgba(37,99,235,.12)"/>`;
+  s += `<path d="${line}" fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>`;
+  if (n <= 31) {
+    pts.forEach((p, i) => {
+      s += `<circle cx="${x(i).toFixed(1)}" cy="${y(p.revenue_cents).toFixed(1)}" r="3" fill="#2563eb"/>`;
+    });
+  }
+
+  const labelEvery = Math.ceil(n / Math.max(2, Math.floor(iw / 80)));
+  pts.forEach((p, i) => {
+    if (i % labelEvery === 0) {
+      s += `<text x="${x(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" font-size="11" fill="#6b7280">${esc(fmtBucket(p.bucket, ts.granularity))}</text>`;
+    }
+  });
+
+  // Invisible hover targets show a native tooltip for each point.
+  const bw = n === 1 ? iw : iw / (n - 1);
+  pts.forEach((p, i) => {
+    s += `<rect x="${(x(i) - bw / 2).toFixed(1)}" y="${m.t}" width="${bw.toFixed(1)}" height="${ih}" fill="transparent">` +
+         `<title>${esc(fmtBucket(p.bucket, ts.granularity))}: ${esc(fmtMoney(p.revenue_cents))} (${intFmt.format(p.orders)} orders)</title></rect>`;
+  });
+  el.innerHTML = s + "</svg>";
+}
+
+function renderBars(el, rows) {
+  if (!rows.length) { el.innerHTML = EMPTY; return; }
+  const max = Math.max(...rows.map((r) => r.revenue_cents)) || 1;
+  el.innerHTML = rows.map((r) => `
+    <div class="bar-row" title="${esc(r.label)}: ${esc(fmtMoney(r.revenue_cents))} · ${intFmt.format(r.orders)} orders">
+      <span class="bar-label">${esc(r.label)}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${((r.revenue_cents / max) * 100).toFixed(1)}%"></div></div>
+      <span class="num">${esc(fmtMoneyShort(r.revenue_cents))}</span>
+    </div>`).join("");
+}
+
+function renderTopProducts(rows) {
+  $("top-products").innerHTML = rows.length
+    ? rows.map((r) => `<tr>
+        <td>${esc(r.name)}</td>
+        <td class="muted">${esc(r.category)}</td>
+        <td class="num">${intFmt.format(r.units)}</td>
+        <td class="num">${esc(fmtMoney(r.revenue_cents))}</td></tr>`).join("")
+    : `<tr><td colspan="4">${EMPTY}</td></tr>`;
+}
+
+function renderRecentOrders(rows) {
+  $("recent-orders").innerHTML = rows.length
+    ? rows.map((r) => `<tr>
+        <td>#${esc(r.id)}</td>
+        <td>${esc(r.order_date)}</td>
+        <td>${esc(r.customer)}</td>
+        <td class="muted">${esc(r.region)}</td>
+        <td><span class="status ${esc(r.status)}">${esc(r.status)}</span></td>
+        <td class="num">${esc(fmtMoney(r.total_cents))}</td></tr>`).join("")
+    : `<tr><td colspan="6"><div class="empty">No orders in this period</div></td></tr>`;
+}
+
+async function init() {
+  try {
+    meta = await fetchJSON("/api/meta");
+  } catch (err) {
+    document.body.classList.remove("loading");
+    showError("Could not load dashboard: " + err.message);
+    return;
+  }
+
+  for (const r of meta.regions) {
+    const opt = document.createElement("option");
+    opt.value = r; opt.textContent = r;
+    $("region").append(opt);
+  }
+  for (const id of ["start", "end"]) { $(id).min = meta.min_date; $(id).max = meta.max_date; }
+
+  document.querySelectorAll(".preset").forEach((b) =>
+    b.addEventListener("click", () => applyPreset(Number(b.dataset.days))));
+  $("filters").addEventListener("submit", (e) => { e.preventDefault(); markPreset(null); load(); });
+  $("region").addEventListener("change", load);
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { if (lastData) renderChart($("chart"), lastData.timeseries); }, 150);
+  });
+
+  // Restore filters from the URL, so links to a specific view can be shared.
+  const q = new URLSearchParams(location.search);
+  $("region").value = q.get("region") || "";   // unknown regions fall back to "All"
+  if (q.get("start") && q.get("end")) {
+    $("start").value = q.get("start");
+    $("end").value = q.get("end");
+    load();
+  } else {
+    applyPreset(30);
+  }
+}
+
+init();
+</script>
+</body>
+</html>

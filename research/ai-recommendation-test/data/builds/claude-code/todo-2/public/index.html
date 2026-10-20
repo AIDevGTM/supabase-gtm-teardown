@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="brand">✓ To-Do</h1>
+
+    <div id="loading" class="card muted">Loading…</div>
+
+    <!-- Auth view -->
+    <section id="auth-view" class="card" hidden>
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab active" data-mode="login" role="tab" aria-selected="true">Log in</button>
+        <button type="button" class="tab" data-mode="signup" role="tab" aria-selected="false">Sign up</button>
+      </div>
+      <form id="auth-form" novalidate>
+        <label>
+          Email
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="password" name="password" autocomplete="current-password" minlength="8" maxlength="72" required />
+        </label>
+        <p id="password-hint" class="hint" hidden>At least 8 characters.</p>
+        <p id="auth-error" class="error" role="alert" hidden></p>
+        <button type="submit" id="auth-submit" class="primary">Log in</button>
+      </form>
+    </section>
+
+    <!-- Tasks view -->
+    <section id="app-view" class="card" hidden>
+      <header class="app-header">
+        <span class="muted">Signed in as <strong id="user-email"></strong></span>
+        <button type="button" id="logout-btn" class="link">Log out</button>
+      </header>
+
+      <form id="new-task-form" class="new-task">
+        <input type="text" id="new-task-input" placeholder="What needs to be done?" maxlength="500" autocomplete="off" aria-label="New task" />
+        <button type="submit" class="primary">Add</button>
+      </form>
+      <p id="task-error" class="error" role="alert" hidden></p>
+
+      <div class="filters" role="group" aria-label="Filter tasks">
+        <button type="button" class="filter active" data-filter="all">All</button>
+        <button type="button" class="filter" data-filter="active">Active</button>
+        <button type="button" class="filter" data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="task-list" class="task-list"></ul>
+      <p id="empty-state" class="muted center" hidden>No tasks here yet.</p>
+
+      <footer class="app-footer">
+        <span id="task-count" class="muted"></span>
+        <button type="button" id="clear-completed" class="link">Clear completed</button>
+      </footer>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

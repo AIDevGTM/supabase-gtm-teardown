@@ -1,0 +1,116 @@
+:root {
+  --bg: #f4f6fa;
+  --card: #ffffff;
+  --text: #1c2333;
+  --muted: #6b7489;
+  --border: #e3e7ef;
+  --accent: #3b6cf6;
+  --accent-soft: rgba(59, 108, 246, 0.12);
+  --up: #148a4b;
+  --down: #c8372d;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 24px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.topbar h1 { margin: 0; font-size: 20px; }
+
+main { max-width: 1400px; margin: 0 auto; padding: 20px 24px 40px; }
+
+.muted { color: var(--muted); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.card h2 { margin: 0 0 12px; font-size: 15px; }
+.card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.card-head h2 { margin: 0; }
+
+/* Filters */
+.filters { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-bottom: 16px; }
+.filters label { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+input, select, button {
+  font: inherit;
+  color: var(--text);
+  padding: 5px 9px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+button { cursor: pointer; }
+button:hover:not(:disabled) { border-color: var(--accent); }
+button:disabled { opacity: 0.45; cursor: default; }
+.presets { display: flex; gap: 4px; }
+.presets button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.error {
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: #fdecea;
+  color: var(--down);
+  border: 1px solid #f5c2bd;
+}
+
+/* KPIs */
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; margin-bottom: 16px; }
+.kpi-label { color: var(--muted); font-size: 13px; }
+.kpi-value { font-size: 26px; font-weight: 650; margin: 4px 0; font-variant-numeric: tabular-nums; }
+.kpi-delta { font-size: 12px; min-height: 1.2em; }
+.kpi-delta.up { color: var(--up); }
+.kpi-delta.down { color: var(--down); }
+
+/* Layout */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.wide { grid-column: 1 / -1; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+body.loading .kpis, body.loading .grid { opacity: 0.55; transition: opacity 0.15s; }
+
+/* Line chart */
+.chart { width: 100%; min-height: 280px; }
+.chart svg { display: block; width: 100%; height: 280px; overflow: visible; }
+.chart .grid-line { stroke: var(--border); }
+.chart .axis-label { fill: var(--muted); font-size: 11px; }
+.chart .line { fill: none; stroke: var(--accent); stroke-width: 2; }
+.chart .area { fill: var(--accent-soft); }
+.chart .dot { fill: var(--accent); pointer-events: none; }
+.chart .hit { fill: transparent; cursor: default; }
+.chart .hit:hover + .dot { r: 5; }
+
+/* Bar charts */
+.bar-row { display: grid; grid-template-columns: 150px 1fr 130px; gap: 10px; align-items: center; margin: 8px 0; }
+.bar-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-track { height: 14px; background: #eef1f6; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--accent); border-radius: 4px; }
+.bar-value { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: #f8f9fc; }
+
+.pager { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-top: 12px; }
+
+.empty { color: var(--muted); text-align: center; padding: 40px 0; margin: 0; }

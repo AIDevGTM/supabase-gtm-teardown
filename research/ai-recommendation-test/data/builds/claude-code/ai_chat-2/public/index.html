@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Auth screen -->
+    <main id="auth-view" class="auth" hidden>
+      <form id="auth-form" class="auth-card" novalidate>
+        <h1>AI Chat</h1>
+        <p class="muted" id="auth-subtitle">Sign in to see your conversations.</p>
+        <label>
+          Username
+          <input id="auth-username" name="username" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input id="auth-password" name="password" type="password" autocomplete="current-password" required />
+        </label>
+        <p id="auth-error" class="error" role="alert" hidden></p>
+        <button type="submit" id="auth-submit" class="primary">Sign in</button>
+        <p class="muted small">
+          <span id="auth-switch-text">No account?</span>
+          <button type="button" id="auth-switch" class="link">Create one</button>
+        </p>
+      </form>
+    </main>
+
+    <!-- Chat screen -->
+    <div id="chat-view" class="layout" hidden>
+      <aside id="sidebar" class="sidebar">
+        <button id="new-chat" class="primary new-chat">+ New chat</button>
+        <nav id="conversation-list" class="conversation-list" aria-label="Conversations"></nav>
+        <div class="account">
+          <span id="account-name" class="muted"></span>
+          <button id="logout" class="link">Sign out</button>
+        </div>
+      </aside>
+
+      <section class="chat">
+        <header class="chat-header">
+          <button id="toggle-sidebar" class="icon-btn" aria-label="Toggle conversations">☰</button>
+          <h2 id="chat-title">New chat</h2>
+        </header>
+
+        <div id="config-warning" class="banner" hidden>
+          The server has no <code>ANTHROPIC_API_KEY</code> set, so AI replies are unavailable.
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite">
+          <div id="empty-state" class="empty-state">
+            <h3>How can I help today?</h3>
+            <p class="muted">Your conversations are saved to your account automatically.</p>
+          </div>
+        </div>
+
+        <form id="composer" class="composer">
+          <textarea
+            id="input"
+            rows="1"
+            placeholder="Send a message…  (Enter to send, Shift+Enter for newline)"
+            maxlength="20000"
+            required
+          ></textarea>
+          <button type="submit" id="send" class="primary">Send</button>
+          <button type="button" id="stop" class="secondary" hidden>Stop</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

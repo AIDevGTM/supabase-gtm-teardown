@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Chat</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Auth screen -->
+  <section id="auth" class="auth hidden">
+    <form id="auth-form" class="auth-card">
+      <h1>AI Chat</h1>
+      <p class="muted" id="auth-subtitle">Sign in to continue your conversations</p>
+      <label>Username <input id="username" autocomplete="username" required /></label>
+      <label>Password <input id="password" type="password" autocomplete="current-password" required /></label>
+      <p id="auth-error" class="error"></p>
+      <button type="submit" id="auth-submit">Sign in</button>
+      <p class="muted small">
+        <span id="auth-switch-text">No account?</span>
+        <a href="#" id="auth-switch">Create one</a>
+      </p>
+    </form>
+  </section>
+
+  <!-- App screen -->
+  <section id="app" class="app hidden">
+    <aside class="sidebar">
+      <button id="new-chat" class="new-chat">+ New chat</button>
+      <ul id="conv-list" class="conv-list"></ul>
+      <div class="user-bar">
+        <span id="whoami"></span>
+        <button id="logout" class="link">Log out</button>
+      </div>
+    </aside>
+    <main class="chat">
+      <div id="messages" class="messages">
+        <div class="empty">Start a conversation below.</div>
+      </div>
+      <form id="composer" class="composer">
+        <textarea id="input" rows="1" placeholder="Message the AI… (Enter to send, Shift+Enter for newline)"></textarea>
+        <button type="submit" id="send">Send</button>
+        <button type="button" id="stop" class="hidden">Stop</button>
+      </form>
+    </main>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>

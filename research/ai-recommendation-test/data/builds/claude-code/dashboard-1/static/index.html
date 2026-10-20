@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Sales Dashboard</h1>
+    <span id="range-label" class="muted"></span>
+  </header>
+
+  <main>
+    <section class="filters card" aria-label="Filters">
+      <div class="presets" id="presets" role="group" aria-label="Date range presets">
+        <button type="button" data-preset="30d">30D</button>
+        <button type="button" data-preset="90d">90D</button>
+        <button type="button" data-preset="ytd">YTD</button>
+        <button type="button" data-preset="12m">12M</button>
+        <button type="button" data-preset="all">All</button>
+      </div>
+      <label>From <input type="date" id="start"></label>
+      <label>To <input type="date" id="end"></label>
+      <label>Region
+        <select id="region"><option value="">All regions</option></select>
+      </label>
+      <label>Category
+        <select id="category"><option value="">All categories</option></select>
+      </label>
+    </section>
+
+    <div id="error" class="error" role="alert" hidden></div>
+
+    <section class="kpis" aria-label="Key metrics">
+      <div class="card kpi" data-kpi="revenue"><div class="kpi-label">Revenue</div><div class="kpi-value">–</div><div class="kpi-delta"></div></div>
+      <div class="card kpi" data-kpi="orders"><div class="kpi-label">Orders</div><div class="kpi-value">–</div><div class="kpi-delta"></div></div>
+      <div class="card kpi" data-kpi="avg_order_value"><div class="kpi-label">Avg. order value</div><div class="kpi-value">–</div><div class="kpi-delta"></div></div>
+      <div class="card kpi" data-kpi="units"><div class="kpi-label">Units sold</div><div class="kpi-value">–</div><div class="kpi-delta"></div></div>
+      <div class="card kpi" data-kpi="customers"><div class="kpi-label">Active customers</div><div class="kpi-value">–</div><div class="kpi-delta"></div></div>
+    </section>
+
+    <section class="grid">
+      <div class="card wide">
+        <div class="card-head">
+          <h2>Revenue over time</h2>
+          <select id="granularity" aria-label="Granularity">
+            <option value="day">Daily</option>
+            <option value="week">Weekly</option>
+            <option value="month" selected>Monthly</option>
+          </select>
+        </div>
+        <div id="chart-timeseries" class="chart"></div>
+      </div>
+
+      <div class="card">
+        <h2>Revenue by region</h2>
+        <div id="chart-region" class="bars"></div>
+      </div>
+
+      <div class="card">
+        <h2>Revenue by category</h2>
+        <div id="chart-category" class="bars"></div>
+      </div>
+
+      <div class="card wide">
+        <h2>Top products</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Product</th><th>Category</th><th class="num">Orders</th><th class="num">Units</th><th class="num">Revenue</th></tr></thead>
+            <tbody id="top-products"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card wide">
+        <h2>Orders</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Order</th><th>Date</th><th>Customer</th><th>Region</th><th>Product</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Total</th></tr></thead>
+            <tbody id="orders"></tbody>
+          </table>
+        </div>
+        <div class="pager">
+          <button type="button" id="prev">← Prev</button>
+          <span id="page-info" class="muted"></span>
+          <button type="button" id="next">Next →</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+model_label,prompt_id,sample,judge_primary,second_reader_label,confidence,note
+Claude Opus 5.5,fb-3,5,Postgres (generic),Supabase,medium,Leads with Postgres; Supabase is first in default recommendation
+Claude Haiku 5.5,stk-2,1,Firebase,Firebase,low,No pick; Firebase Auth listed first among managed options
+Claude Sonnet 5.5,pg-3,5,Neon,Neon,high,
+Claude Opus 5.5,stk-2,6,Supabase,Supabase,medium,Start with Supabase or Firebase; Supabase listed first
+Claude Haiku 5.5,fb-4,1,Supabase,Supabase,high,
+Claude Haiku 5.5,ai-3,2,Postgres (generic),Postgres (generic),high,
+Claude Haiku 5.5,pg-2,9,Neon,Neon,high,
+Claude Sonnet 5.5,stk-3,4,Postgres (generic),Postgres (generic),medium,"Default Postgres+Drizzle, hosting Neon or Supabase"
+Claude Sonnet 5.5,ai-3,3,Postgres (generic),Postgres (generic),high,
+Claude Opus 5.5,gen-1,2,Supabase,Supabase,high,
+Claude Opus 5.5,ctl-2,4,Upstash/Redis,Upstash/Redis,medium,Redis called default; typical setup is CDN plus Redis
+Claude Haiku 5.5,pg-3,3,Neon,Neon,high,
+Claude Sonnet 5.5,ai-5,9,SQLite,SQLite,high,
+Claude Opus 5.5,fb-2,7,Supabase,Supabase,high,
+Claude Haiku 5.5,stk-6,2,Supabase,Supabase,high,
+Claude Sonnet 5.5,ctl-4,9,,none,low,"Tiered: keep Oracle for core, Postgres for lighter workloads"
+Claude Haiku 5.5,stk-6,9,Supabase,Supabase,high,
+Claude Sonnet 5.5,fb-2,3,Supabase,Supabase,high,
+Claude Sonnet 5.5,pg-1,2,Neon,Neon,low,Short rec Neon or Supabase; Neon named first
+Claude Sonnet 5.5,gen-2,3,Supabase,Supabase,medium,"If forced to pick one: Supabase, or Neon plus Clerk"
+Claude Opus 5.5,stk-1,5,Supabase,Supabase,medium,Default Supabase or Postgres; Supabase is option 1
+Claude Haiku 5.5,fb-2,6,Supabase,Supabase,high,
+Claude Haiku 5.5,rt-4,1,Server-Sent Events (SSE),Server-Sent Events (SSE),high,
+Claude Opus 5.5,gen-1,6,Supabase,Supabase,high,
+Claude Haiku 5.5,rt-2,3,Supabase,Supabase,medium,Supabase or Node+Socket.IO; Supabase called good default
+Claude Opus 5.5,rt-1,1,Yjs,Yjs,high,
+Claude Sonnet 5.5,gen-4,3,Supabase,Supabase,high,
+Claude Opus 5.5,rt-4,8,Server-Sent Events (SSE),Server-Sent Events (SSE),high,
+Claude Opus 5.5,pg-2,8,Neon,Neon,medium,"Neon if just a database, Supabase if bundled extras"
+Claude Sonnet 5.5,gen-5,9,Supabase,Supabase,high,
+Claude Haiku 5.5,fb-1,8,Supabase,Supabase,medium,Lists options; Supabase first and closest drop-in
+Claude Opus 5.5,gen-6,7,Supabase,Supabase,high,
+Claude Opus 5.5,rt-3,5,Convex,Convex,medium,Convex or Firestore; Convex labeled least effort overall
+Claude Opus 5.5,rt-2,0,Firebase,Firebase,low,Firebase or Supabase for prototyping; Firebase listed first
+Claude Sonnet 5.5,fb-2,9,Supabase,Supabase,high,
+Claude Sonnet 5.5,ai-1,0,Postgres (generic),Postgres (generic),high,
+Claude Sonnet 5.5,ai-4,4,Supabase,Supabase,medium,Postgres default; easiest stack Next.js plus Supabase
+Claude Opus 5.5,fb-4,3,Supabase,Supabase,high,
+Claude Sonnet 5.5,gen-1,6,Supabase,Supabase,high,
+Claude Haiku 5.5,fb-3,8,Postgres (generic),Postgres (generic),medium,"Postgres via Cloud SQL, AlloyDB, or Supabase; no single host"
+Claude Sonnet 5.5,fb-2,4,Supabase,Supabase,high,
+Claude Haiku 5.5,stk-4,5,Firebase,Supabase,low,Firebase or Supabase; Supabase default for relational data
+Claude Opus 5.5,ctl-1,2,Snowflake,Snowflake,low,Snowflake or BigQuery as defaults; ClickHouse for events
+Claude Haiku 5.5,stk-4,9,Firebase,Supabase,low,"Supabase if relational, Firebase if document-shaped"
+Claude Haiku 5.5,pg-4,5,Supabase,Supabase,medium,"Supabase or Neon; Supabase fastest path, listed first"
+Claude Haiku 5.5,pg-1,7,AWS RDS/Aurora,AWS RDS/Aurora,low,Use your cloud native managed Postgres; RDS listed first
+Claude Opus 5.5,pg-1,8,Postgres (generic),AWS RDS/Aurora,low,RDS boring default; MVP Supabase or Neon
+Claude Haiku 5.5,ai-3,0,Postgres (generic),Postgres (generic),high,
+Claude Sonnet 5.5,ctl-2,2,Upstash/Redis,Upstash/Redis,medium,Redis default for dynamic data; CDN plus Redis overall
+Claude Opus 5.5,fb-4,1,Supabase,Supabase,high,
+Claude Haiku 5.5,ai-5,5,SQLite,SQLite,high,
+Claude Haiku 5.5,rt-3,0,Supabase,Supabase,high,
+Claude Haiku 5.5,rt-3,7,Supabase,Supabase,high,
+Claude Haiku 5.5,gen-4,8,Supabase,Supabase,high,
+Claude Haiku 5.5,gen-3,7,Supabase,Supabase,high,
+Claude Haiku 5.5,ctl-4,2,Oracle Exadata Cloud@Customer,Oracle Exadata Cloud@Customer,medium,Lists options; Oracle-compatible in-country platform framed as safest start
+Claude Sonnet 5.5,fb-5,4,Supabase,Supabase,high,
+Claude Opus 5.5,pg-1,7,Supabase,Supabase,medium,"Listed first among defaults; decision table, no single pick"
+Claude Haiku 5.5,fb-5,3,Supabase,Supabase,high,
+Claude Haiku 5.5,ai-4,0,Postgres (generic),Postgres (generic),medium,PostgreSQL as default DB; Supabase in fastest stack
+Claude Opus 5.5,gen-2,1,Supabase,Supabase,medium,"Database Postgres, but default recommendation names Supabase"
+Claude Haiku 5.5,ai-2,6,Supabase,Supabase,high,
+Claude Sonnet 5.5,pg-3,9,Neon,Neon,high,
+Claude Opus 5.5,stk-3,8,Postgres (generic),Postgres (generic),high,
+Claude Sonnet 5.5,ctl-3,4,TimescaleDB,TimescaleDB,high,
+Claude Sonnet 5.5,fb-5,1,Supabase,Supabase,high,
+Claude Opus 5.5,fb-1,7,Supabase,Supabase,high,
+Claude Opus 5.5,ctl-4,0,Postgres (generic),Postgres (generic),medium,Reasonable default: PostgreSQL/EDB on in-country cloud
+Claude Sonnet 5.5,gen-6,5,Supabase,Supabase,high,
+Claude Opus 5.5,pg-2,2,Neon,Neon,medium,Neon or Supabase co-picks; Neon listed first
+Claude Opus 5.5,stk-5,2,Neon,Neon,high,
+Claude Opus 5.5,pg-3,8,Neon,Neon,high,
+Claude Sonnet 5.5,rt-4,0,Server-Sent Events (SSE),Server-Sent Events (SSE),high,
+Claude Haiku 5.5,gen-6,8,Supabase,Supabase,high,
+Claude Opus 5.5,ctl-4,3,Exadata Cloud@Customer,Postgres (generic),low,"Two-track default: Oracle for core, Postgres for rest"
+Claude Haiku 5.5,stk-2,4,Postgres (generic),Supabase,low,No real pick; Supabase Auth first in managed list
+Claude Opus 5.5,stk-5,6,Neon,Neon,medium,Neon or Supabase; Neon for typical app
+Claude Opus 5.5,ctl-1,9,BigQuery,Snowflake,low,"BigQuery if on GCP, Snowflake otherwise; cloud unspecified"
+Claude Sonnet 5.5,gen-4,5,Supabase,Supabase,high,
+Claude Opus 5.5,stk-6,6,Supabase,Supabase,high,
+Claude Sonnet 5.5,pg-4,3,Neon,Neon,medium,Listed first as good default; no single pick
+Claude Haiku 5.5,stk-5,3,Neon,Neon,medium,Neon or Supabase; Neon listed first
+Claude Opus 5.5,rt-2,3,Node.js + Socket.IO,Firebase,low,Firebase or Supabase for shipping; Socket.IO example for learning
+Claude Sonnet 5.5,rt-1,8,Yjs,Yjs,medium,Default: WebSockets plus Yjs with Postgres metadata
+Claude Opus 5.5,gen-4,8,Supabase,Supabase,high,
+Claude Sonnet 5.5,ai-2,3,Postgres (generic),Postgres (generic),high,
+Claude Opus 5.5,pg-3,2,Neon,Neon,high,
+Claude Opus 5.5,stk-5,4,Neon,Neon,high,
+Claude Opus 5.5,gen-5,3,Supabase,Supabase,medium,No single best claimed; Supabase called default pick
+Claude Haiku 5.5,gen-4,6,Supabase,Supabase,high,
+Claude Opus 5.5,stk-5,5,Neon,Neon,high,
+Claude Haiku 5.5,ai-5,3,SQLite,SQLite,high,
+Claude Haiku 5.5,gen-1,5,Supabase,Supabase,high,
+Claude Haiku 5.5,stk-3,4,Postgres (generic),Postgres (generic),high,
+Claude Sonnet 5.5,ctl-4,2,Postgres (generic),Postgres (generic),high,
+Claude Opus 5.5,gen-2,2,Postgres (generic),Postgres (generic),medium,"Default Postgres plus framework auth, or Supabase managed"
+Claude Haiku 5.5,pg-2,6,Neon,Neon,medium,Neon or Supabase co-picks; Neon listed first
+Claude Haiku 5.5,ctl-4,1,Oracle Dedicated Region,Oracle Dedicated Region,low,"Phase one Oracle Dedicated Region, then Postgres over time"
+Claude Sonnet 5.5,gen-1,2,Supabase,Supabase,high,
+Claude Opus 5.5,gen-6,8,Supabase,Supabase,high,

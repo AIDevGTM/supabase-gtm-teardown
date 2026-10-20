@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: flex-start;
+  padding: 48px 16px; background: #f1f4f9; color: #1f2937;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.card { width: 100%; max-width: 480px; background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 6px 24px rgba(0,0,0,.08); }
+h1 { margin: 0 0 20px; font-size: 1.6rem; }
+label { display: block; font-size: .9rem; margin-bottom: 12px; }
+input { width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; margin-top: 4px; }
+input:focus { outline: 2px solid #6366f1; border-color: transparent; }
+button { font: inherit; cursor: pointer; border: none; border-radius: 8px; }
+button:disabled { opacity: .6; cursor: default; }
+.primary { background: #4f46e5; color: #fff; padding: 10px 18px; }
+.primary:hover:not(:disabled) { background: #4338ca; }
+#auth-form .primary { width: 100%; }
+.link { background: none; color: #4f46e5; padding: 0; }
+.tabs { display: flex; gap: 4px; margin-bottom: 16px; background: #f3f4f6; padding: 4px; border-radius: 10px; }
+.tab { flex: 1; padding: 8px; background: none; color: #6b7280; }
+.tab.active { background: #fff; color: #111827; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.error { color: #dc2626; font-size: .9rem; min-height: 1.2em; margin: 4px 0 8px; }
+.muted { color: #6b7280; font-size: .9rem; }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-size: .9rem; color: #6b7280; }
+.row { display: flex; gap: 8px; }
+.row input { margin-top: 0; }
+ul { list-style: none; padding: 0; margin: 8px 0; }
+li { display: flex; align-items: center; gap: 10px; padding: 10px 4px; border-bottom: 1px solid #f0f0f0; }
+li input[type=checkbox] { width: 18px; height: 18px; margin: 0; flex: none; cursor: pointer; }
+li .title { flex: 1; word-break: break-word; cursor: text; }
+li.done .title { text-decoration: line-through; color: #9ca3af; }
+li .edit { margin: 0; padding: 4px 8px; }
+li .del { background: none; color: #9ca3af; font-size: 1.2rem; padding: 0 6px; }
+li .del:hover { color: #dc2626; }

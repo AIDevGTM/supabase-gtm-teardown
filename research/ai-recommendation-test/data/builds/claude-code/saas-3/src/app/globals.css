@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f7f7fb;
+  --fg: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --danger: #b91c1c;
+  --success: #047857;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.nav nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--fg);
+}
+
+.button,
+button.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button:hover {
+  background: var(--accent-hover);
+}
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.button.small {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+}
+.button.secondary {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+.button.secondary:hover {
+  background: var(--bg);
+}
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+.hero h1 {
+  font-size: 2.6rem;
+  margin: 0 0 0.75rem;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin: 0 auto 1.75rem;
+  max-width: 560px;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.price span {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+.features {
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.auth {
+  max-width: 400px;
+  margin: 2rem auto;
+}
+.auth h1 {
+  margin-top: 0;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+.field input {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.field input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+.auth .button {
+  width: 100%;
+}
+
+.error {
+  color: var(--danger);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+}
+.notice {
+  color: var(--success);
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #eef2ff;
+  color: var(--accent);
+}
+.badge.free {
+  background: #f3f4f6;
+  color: var(--muted);
+}
+.badge.warn {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.locked {
+  opacity: 0.6;
+}

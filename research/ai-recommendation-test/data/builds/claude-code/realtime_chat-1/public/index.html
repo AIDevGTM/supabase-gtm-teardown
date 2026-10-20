@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat Room</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Join screen -->
+  <main id="join-screen" class="join">
+    <form id="join-form" class="card" autocomplete="off">
+      <h1>💬 Chat Room</h1>
+      <p class="muted">Pick a name to join the conversation.</p>
+      <label for="name-input" class="sr-only">Your name</label>
+      <input id="name-input" type="text" maxlength="24" placeholder="Your name" required autofocus />
+      <button type="submit">Join chat</button>
+    </form>
+  </main>
+
+  <!-- Chat screen -->
+  <div id="chat-screen" class="chat" hidden>
+    <header class="topbar">
+      <div class="title">
+        <strong>💬 Chat Room</strong>
+        <span id="status" class="status" data-state="connecting">Connecting…</span>
+      </div>
+      <div class="me">
+        <span>You are <strong id="my-name"></strong></span>
+        <button id="users-toggle" class="ghost mobile-only" type="button" aria-controls="sidebar">
+          👥 <span id="user-count-mobile">0</span>
+        </button>
+        <button id="leave-btn" class="ghost" type="button">Leave</button>
+      </div>
+    </header>
+
+    <div class="body">
+      <section class="messages-wrap">
+        <ol id="messages" class="messages" aria-live="polite"></ol>
+        <div id="typing" class="typing" aria-live="polite"></div>
+        <form id="message-form" class="composer" autocomplete="off">
+          <label for="message-input" class="sr-only">Message</label>
+          <textarea id="message-input" rows="1" maxlength="1000"
+                    placeholder="Type a message… (Enter to send, Shift+Enter for a new line)"></textarea>
+          <button type="submit" id="send-btn">Send</button>
+        </form>
+        <div id="error" class="error" role="alert" hidden></div>
+      </section>
+
+      <aside id="sidebar" class="sidebar">
+        <h2>Online — <span id="user-count">0</span></h2>
+        <ul id="users" class="users"></ul>
+      </aside>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
