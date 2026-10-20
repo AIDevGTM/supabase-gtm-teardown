@@ -12,7 +12,7 @@ Every chapter of the page is a table, and every number comes from a query that r
 | --- | --- |
 | `supabase/migrations/0000_case_queries.sql` | The query runner. `case_queries` holds every SQL block shown on the page, and `run_case_query(id)` runs only those, with a 2-second timeout, returning rows plus execution time |
 | `supabase/migrations/0001` … `0010` | One migration per original chapter: schema, Row Level Security policies and data |
-| `supabase/migrations/0011` … `0020` | The founder playbook (lessons, diagnostic, stages, templates), the fact-check fixes, the AI study results and copy changes, in the order they were applied |
+| `supabase/migrations/0011` … `0021` | The founder playbook (lessons, diagnostic, stages, templates), the fact-check fixes, the AI study results and copy changes, in the order they were applied |
 | `supabase/ALL-MIGRATIONS.sql` | All migrations in one file, for pasting into the Supabase SQL Editor |
 | `public/console/case-study.sql` | The bundle the in-browser SQL console loads into PGlite |
 | `tools/build_sql.py` | Generates every file above from one source of truth |

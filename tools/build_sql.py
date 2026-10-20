@@ -1240,6 +1240,55 @@ FILES["0020_repo_links.sql"] = inserts("sources", ["n", "label", "href"], [
 ]).rstrip(";\n") + "\non conflict (n) do update set label = excluded.label, href = excluded.href;\n"
 
 
+# ------------------------------------------------------------------ 0021 findings block + "why not Appwrite?" comparison
+# Rival data collected 20 Oct 2026: GitHub API (stars, repo created), HN Algolia (stories of 100+ points with the name
+# in the title or URL), our AI study (first pick and mentions on the 150 "Firebase alternative" answers), READMEs (database).
+RIVALS = [
+    # sort, product, positioning, database_layer, repo_created, github_stars, hn_100_stories, hn_points, ai_first_pick, ai_named
+    (1, "Supabase", "An open source Firebase alternative (Hacker News, 2020)", "Postgres, a full database per project", "2019-10-12", 112224, 61, 17401, 123, 150),
+    (2, "Appwrite", "Open-source and self-hosted Firebase alternative (Show HN, 2022)", "Its own database layer; now also managed PostgreSQL and MySQL", "2019-04-08", 57739, 2, 479, 0, 118),
+    (3, "Nhost", "Open source Firebase alternative with GraphQL (Show HN, 2020)", "Postgres behind a Hasura GraphQL API", "2021-02-09", 9363, 3, 547, 0, 84),
+    (4, "PocketBase", "Open source realtime backend in 1 file", "SQLite, in a single Go binary", "2022-07-05", 61507, 5, 2194, 0, 113),
+]
+FINDINGS = [
+    # sort, number, headline, detail, anchor
+    (1, "3.8x → 1.0x", "Launch weeks stopped moving stars.", "Average GitHub star lift per launch week fell every year from 2021 to 2025. The ritual kept paying in growth; it stopped acquiring attention.", "lesson-5"),
+    (2, "18 of 61", "The CEO was the channel.", "Copplestone posted 18 of the 61 Hacker News stories over 100 points that link to or name Supabase. 29 of the 61 never say Supabase in the headline: they teach Postgres.", "lesson-12"),
+    (3, "0 of 150", "Being in the category isn't owning it.", "Asked for a Firebase alternative, Claude named Appwrite in 118 of 150 answers and never picked it first. Supabase was first in 123.", "rivals"),
+    (4, "93 of 120", "Models file you under the category you borrowed.", "Ask Claude for Postgres hosting and it picks Neon in 93 of 120 answers; Supabase gets 16, despite calling itself the Postgres development platform.", "ai_waves"),
+]
+FILES["0021_findings_and_rivals.sql"] = """create table if not exists public.findings (
+  sort     int primary key,
+  number   text not null,
+  headline text not null,
+  detail   text not null,
+  anchor   text not null   -- in-page id the card links to
+);
+create table if not exists public.rivals (
+  sort           int primary key,
+  product        text not null,
+  positioning    text not null,
+  database_layer text not null,
+  repo_created   date not null,
+  github_stars   int  not null,
+  hn_100_stories int  not null,
+  hn_points      int  not null,
+  ai_first_pick  int  not null,   -- of 150 "Firebase alternative" answers
+  ai_named       int  not null
+);
+""" + public_read("findings", "rivals").replace('create policy "Public read"', 'drop policy if exists "Public read" on public.findings;\ndrop policy if exists "Public read" on public.rivals;\ncreate policy "Public read"', 1) + "\n" \
+  + inserts("findings", ["sort", "number", "headline", "detail", "anchor"], FINDINGS).rstrip(";\n") \
+  + "\non conflict (sort) do update set number = excluded.number, headline = excluded.headline, detail = excluded.detail, anchor = excluded.anchor;\n\n" \
+  + inserts("rivals", ["sort", "product", "positioning", "database_layer", "repo_created", "github_stars", "hn_100_stories", "hn_points", "ai_first_pick", "ai_named"], RIVALS).rstrip(";\n") \
+  + "\non conflict (sort) do update set product = excluded.product, positioning = excluded.positioning, database_layer = excluded.database_layer, repo_created = excluded.repo_created, github_stars = excluded.github_stars, hn_100_stories = excluded.hn_100_stories, hn_points = excluded.hn_points, ai_first_pick = excluded.ai_first_pick, ai_named = excluded.ai_named;\n\n" \
+  + "delete from public.case_queries where id = 'rivals';\n" + register([
+    ("rivals", "taglines", 3,
+     "select product, database_layer, github_stars, hn_100_stories,\n       ai_first_pick || ' of 150' as claude_first_pick,\n       product = 'Supabase' as _hot\nfrom rivals order by sort;",
+     [C("product", "text", "bold"), C("database_layer", "text"), C("github_stars", "int4", "compact"), C("hn_100_stories", "int4", "big"), C("claude_first_pick", "text", "mono")],
+     "Collected 20 Oct 2026: GitHub API, Hacker News (Algolia), our AI study, project READMEs", {"bar": "hn_100_stories"}),
+]) + "\n-- Lovable's form test left one fake signup; remove only that row.\ndelete from public.subscribers where email = 'qa+teardown-check@example.com';\n"
+
+
 def main():
     MIG.mkdir(parents=True, exist_ok=True)
     for name, sql in FILES.items():
